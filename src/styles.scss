@@ -35,9 +35,124 @@ $myCompanyFront-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-.title-1{
-  font-size: 24px;
+html, body { height: 100%; }
+body { margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url("./assets/img/bacground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//main banners
+.main-banner{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .banner-content, .shadow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .banner-content{
+    width: 70%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+
+    h1,h3{
+      color: white;
+      margin-bottom: 3vw;
+    }
+
+    h1{
+      font-size: 5vw;
+      font-weight: bold;
+      line-height: 5vw;
+    }
+
+    h3{
+      font-size: 1.8vw;
+      line-height: 3vw;
+    }
+
+    button{
+      border-radius: 30px;
+      border: 2px solid white;
+      padding: 1.5vw 2vw;
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5vw;
+    }
+    button:hover{
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .shadow{
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.title-1{
+  font-size: 4.5vw;
+  color: white;
+  font-weight: bold;
+  line-height: 5vw;
+}
+
+.button-1{
+  border: 1.5px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 1vw 2vw;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.button-1:hover{
+  background-color: white;
+  color: black;
+}
+
+.button-2{
+  background-color: white;
+  color: black;
+  padding: 1vw 2vw;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+}
+.button-2:hover{
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.sub-heading-1{
+  font-size: 15px;
+  color: #13E8E9;
+  font-weight: bold;
+}
+
+.p-1{
+  color: white;
+  z-index: 2;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 30px;
+  margin: 20px 0;
+}
