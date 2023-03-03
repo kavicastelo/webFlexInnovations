@@ -1,1 +1,61 @@
+.main-banner{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 
+  .banner-content, .shadow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .banner-content{
+    width: 70%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+
+    h1,h3{
+      color: white;
+      margin-bottom: 3vw;
+    }
+
+    h1{
+      font-size: 5vw;
+      font-weight: bold;
+      line-height: 5vw;
+    }
+
+    h3{
+      font-size: 1.8vw;
+      line-height: 3vw;
+    }
+
+    button{
+      border-radius: 30px;
+      border: 1px solid white;
+      padding: 1.5vw 2vw;
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5vw;
+    }
+    button:hover{
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .shadow{
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  img{
+    width: 100%;
+  }
+}
