@@ -10,8 +10,8 @@
   }
 }
 
-#service-sec, #works-sec{
-  margin-bottom: 50px;
+#service-sec, #works-sec, #join-us-sec{
+  margin-bottom: 70px;
 
   .service-content{
     flex: 1;
@@ -22,5 +22,9 @@
   .mat-icon{
     color: white;
     font-size: 5vw;
+  }
+
+  img{
+    width: 100%;
   }
 }
