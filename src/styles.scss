@@ -35,6 +35,16 @@ $myCompanyFront-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+/*scroll bar*/
+body::-webkit-scrollbar{
+  width: 4px;
+  background-color: #000;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #13E8E9;
+  border-radius: 20px;
+}
+
 html, body { height: 100%; }
 body { margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -115,6 +125,13 @@ body { margin: 0;
   line-height: 5vw;
 }
 
+.title-2{
+  font-size: 3vw;
+  line-height: 4vw;
+  color: white;
+  font-weight: bold;
+}
+
 .button-1{
   border: 1.5px solid white;
   background-color: transparent;
@@ -130,6 +147,7 @@ body { margin: 0;
 
 .button-2{
   background-color: white;
+  font-weight: bold;
   color: black;
   padding: 1vw 2vw;
   font-size: 16px;
@@ -155,4 +173,11 @@ body { margin: 0;
   text-align: justify;
   line-height: 30px;
   margin: 20px 0;
+}
+
+.bg-images{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
