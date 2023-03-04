@@ -118,6 +118,57 @@ body { margin: 0;
   }
 }
 
+//sub main banners
+.sub-main-banner{
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+
+  .overlay-half {
+    background: linear-gradient(to top, #000e11 10%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0;
+    height: 50%;
+    width: 100%;
+    opacity: .9;
+  }
+
+  .sub-main-banner-content{
+    width: 100%;
+    padding: 10% 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    h1{
+      color: white;
+      font-weight: bold;
+      font-size: 50px;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    h3{
+      position: absolute;
+      color: white;
+      font-family: 'Kanit', sans-serif;
+      font-weight: bolder;
+      font-size: 24px;
+      text-shadow: 1px 1px 2px black;
+
+      span:hover{
+        cursor: pointer;
+        color: #13E8E9;
+      }
+    }
+  }
+}
+
 .title-1{
   font-size: 4.5vw;
   color: white;
