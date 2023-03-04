@@ -9,3 +9,24 @@
     }
   }
 }
+
+#meet-team{
+  width: 100%;
+  min-height: 300px;
+  background-color: #000;
+
+  .meet-team-cont{
+    flex: 1;
+    min-height: 200px;
+
+    img{
+      width: 100%;
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+}

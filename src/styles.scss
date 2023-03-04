@@ -211,6 +211,21 @@ body { margin: 0;
   color: white;
 }
 
+.button-3{
+  background-color: #e74c3c;
+  font-weight: bold;
+  color: white;
+  padding: 1vw 2vw;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+}
+.button-3:hover{
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
 .sub-heading-1{
   font-size: 15px;
   color: #13E8E9;
@@ -231,4 +246,11 @@ body { margin: 0;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+}
+
+.ul-1{
+  color: white;
+  font-size: 16px;
+  line-height: 45px;
+  list-style: url("./assets/img/asset/lnr-checkmark-circle.png");
 }
