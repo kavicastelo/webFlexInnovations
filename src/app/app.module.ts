@@ -14,6 +14,7 @@ import { FaqComponent } from './components/faq/faq.component';
 import { JoinCrewComponent } from './components/join-crew/join-crew.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContactComponent } from './components/contact/contact.component';
+import {NgImageSliderModule} from "ng-image-slider";
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ContactComponent } from './components/contact/contact.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

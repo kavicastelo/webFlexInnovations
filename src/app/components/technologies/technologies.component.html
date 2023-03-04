@@ -1,1 +1,26 @@
-<p>technologies works!</p>
+<div class="sub-main-banner" style="background-image: url(/assets/img/sub-main-banner.jpg)">
+  <div class="overlay-half"></div>
+  <div class="sub-main-banner-content">
+    <div>
+      <h1>Technologies</h1>
+      <h3><span routerLink="/home">Home /</span> <span style="color: #13E8E9"> Technologies</span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="d-md-flex align-items-center">
+    <div class="tech-cont">
+      <span class="sub-heading-1">TECHNOLOGIES WE USE</span>
+      <div class="title-1">We'll transform technology to a new direction</div>
+    </div>
+    <div class="tech-cont" style="margin: 5vw 0; background-color: rgba(255,255,255,0.8);padding: 10px 0; border-radius: 0 20px 20px 0">
+        <ng-image-slider #nav
+                         [images]="imageObject"
+                         [infinite]="true"
+                         [autoSlide]="1"
+                         [imageSize]="{width: '50%', height: 250}"
+                         slideImage="1"></ng-image-slider>
+    </div>
+  </div>
+</div>
