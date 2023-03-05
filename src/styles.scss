@@ -169,6 +169,21 @@ body { margin: 0;
   }
 }
 
+//article wrapper
+.article-wrapper{
+  background-color: rgba(0,0,0,0.7);
+  padding: 5vw 4vw;
+
+  .article-cont{
+    flex: 1;
+    padding: 10px;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
 .title-1{
   font-size: 4.5vw;
   color: white;
@@ -239,6 +254,12 @@ body { margin: 0;
   text-align: justify;
   line-height: 30px;
   margin: 20px 0;
+}
+
+.p-2{
+  color: white;
+  font-size: 16px;
+  text-align: justify;
 }
 
 .bg-images{

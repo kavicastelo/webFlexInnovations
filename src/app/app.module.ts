@@ -15,6 +15,10 @@ import { JoinCrewComponent } from './components/join-crew/join-crew.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {NgImageSliderModule} from "ng-image-slider";
+import { MobDevComponent } from './components/service/mob-dev/mob-dev.component';
+import { WebDevComponent } from './components/service/web-dev/web-dev.component';
+import { FrontDevComponent } from './components/service/front-dev/front-dev.component';
+import { BackDevComponent } from './components/service/back-dev/back-dev.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import {NgImageSliderModule} from "ng-image-slider";
     FaqComponent,
     JoinCrewComponent,
     NotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    MobDevComponent,
+    WebDevComponent,
+    FrontDevComponent,
+    BackDevComponent
   ],
   imports: [
     BrowserModule,

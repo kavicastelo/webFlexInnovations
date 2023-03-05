@@ -9,6 +9,10 @@ import {FaqComponent} from "./components/faq/faq.component";
 import {JoinCrewComponent} from "./components/join-crew/join-crew.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {ContactComponent} from "./components/contact/contact.component";
+import {BackDevComponent} from "./components/service/back-dev/back-dev.component";
+import {FrontDevComponent} from "./components/service/front-dev/front-dev.component";
+import {WebDevComponent} from "./components/service/web-dev/web-dev.component";
+import {MobDevComponent} from "./components/service/mob-dev/mob-dev.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -20,6 +24,10 @@ const routes: Routes = [
   {path:"contact", component:ContactComponent},
   {path:"faq", component:FaqComponent},
   {path:"join-crew", component:JoinCrewComponent},
+  {path:"mobile-dev", component:MobDevComponent},
+  {path:"web-dev", component:WebDevComponent},
+  {path:"frontend-dev", component:FrontDevComponent},
+  {path:"backend-dev", component:BackDevComponent},
   {path:"**", component:NotFoundComponent},
 ];
 
