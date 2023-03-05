@@ -19,6 +19,7 @@ import { MobDevComponent } from './components/service/mob-dev/mob-dev.component'
 import { WebDevComponent } from './components/service/web-dev/web-dev.component';
 import { FrontDevComponent } from './components/service/front-dev/front-dev.component';
 import { BackDevComponent } from './components/service/back-dev/back-dev.component';
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 @NgModule({
@@ -38,13 +39,14 @@ import { BackDevComponent } from './components/service/back-dev/back-dev.compone
     FrontDevComponent,
     BackDevComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    NgImageSliderModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        NgImageSliderModule,
+        MatExpansionModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

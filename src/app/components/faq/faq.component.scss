@@ -1,0 +1,44 @@
+::ng-deep .mat-expansion-panel-header-title{
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+
+::ng-deep .mat-expansion-panel-header-description{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+::ng-deep .mat-expansion-panel{
+  color: white;
+  background-color: transparent;
+}
+
+.faq-wrapper{
+  margin: 3vw 0;
+
+  img{
+    width: 100%;
+  }
+}
+
+.start-pro{
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+
+  img{
+    width: 100%;
+  }
+
+  .start-pro-cont{
+    width: 100%;
+    position: absolute;
+  }
+}

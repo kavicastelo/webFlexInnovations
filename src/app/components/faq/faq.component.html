@@ -1,1 +1,149 @@
-<p>faq works!</p>
+<div class="sub-main-banner" style="background-image: url(/assets/img/sub-main-banner.jpg)">
+  <div class="overlay-half"></div>
+  <div class="sub-main-banner-content">
+    <div>
+      <h1>FAQ</h1>
+      <h3><span routerLink="/home">Home /</span> <span style="color: #13E8E9"> FAQ</span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-wrapper">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="padding: 0 13vw">
+      <span class="sub-heading-1">FAQ</span>
+      <div class="title-1" style="text-align: center">Frequently Asked Questions</div>
+    </div>
+
+    <div class="title-2">General</div>
+
+    <div class="col-12">
+      <div class="row faq-wrapper">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState1 = true"
+                                 (closed)="panelOpenState1 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState1 ? '#13E8E9' : 'white' }">
+                  Where have located your company?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState1 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState1?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>We are located in the Southern province of Sri Lanka. But mostly we are doing business through online platforms.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState2 = true"
+                                 (closed)="panelOpenState2 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState2 ? '#13E8E9' : 'white' }">
+                  What are the work times?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState2 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState2?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>We are open from 8.00 am to 6.00 pm for doing business. But we have a 24/7 client support program.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState3 = true"
+                                 (closed)="panelOpenState3 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState3 ? '#13E8E9' : 'white' }">
+                  How I am contacting your team?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState3 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState3?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>You can simply click on the start project button on the navigation bar. Otherwise, you can directly click on the contact option. We respond to your email soon as possible.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState4 = true"
+                                 (closed)="panelOpenState4 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState4 ? '#13E8E9' : 'white' }">
+                  How long get you complete the project?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState4 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState4?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>It depends on your project scenario. We always try to complete projects quickly and correctly.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+          <img src="./assets/img/faq/faq-1.jpg" alt="faq">
+        </div>
+      </div>
+    </div>
+
+    <div class="title-2">Payment</div>
+
+    <div class="col-12">
+      <div class="row faq-wrapper">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+          <img src="./assets/img/faq/faq-2.jpg" alt="faq">
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState1 = true"
+                                 (closed)="panelOpenState1 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState1 ? '#13E8E9' : 'white' }">
+                  What are the payment methods you accept?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState1 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState1?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>We accept direct bank deposits only.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+          <mat-accordion style="color: white">
+            <mat-expansion-panel (opened)="panelOpenState2 = true"
+                                 (closed)="panelOpenState2 = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title [ngStyle]="{'color':panelOpenState2 ? '#13E8E9' : 'white' }">
+                  How much cost to develop per website?
+                </mat-panel-title>
+                <mat-panel-description [ngStyle]="{'color':panelOpenState2 ? '#13E8E9' : 'white' }">
+                  <mat-icon>{{panelOpenState2?'remove':'add'}}</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>The cost is defined by your project size and what are the resources you use. </p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="start-pro">
+      <div class="start-pro-cont">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <span class="sub-heading-1">GET STARTED</span>
+          <div class="title-2">Ready To Start Your Project?</div>
+          <button class="button-3" routerLink="/contact">Start a Project</button>
+        </div>
+      </div>
+      <img src="./assets/img/faq/faq-3.jpg" alt="get started">
+    </div>
+
+  </div>
+</div>
