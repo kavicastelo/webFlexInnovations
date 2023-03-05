@@ -198,6 +198,13 @@ body { margin: 0;
   font-weight: bold;
 }
 
+.title-3{
+  font-size: 2vw;
+  line-height: 3vw;
+  color: black;
+  font-weight: bold;
+}
+
 .button-1{
   border: 1.5px solid white;
   background-color: transparent;
@@ -226,7 +233,7 @@ body { margin: 0;
   color: white;
 }
 
-.button-3{
+.button-3, .button-5{
   background-color: #e74c3c;
   font-weight: bold;
   color: white;
@@ -239,6 +246,12 @@ body { margin: 0;
   background-color: transparent;
   border: 2px solid white;
   color: white;
+}
+
+.button-5:hover{
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
 }
 
 .button-4{
@@ -272,11 +285,15 @@ body { margin: 0;
   margin: 20px 0;
 }
 
-.p-2{
+.p-2, .p-3{
   color: white;
   font-size: 16px;
   text-align: justify;
   line-height: 20px;
+}
+
+.p-3{
+  color: black;
 }
 
 .bg-images{

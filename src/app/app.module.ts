@@ -21,6 +21,9 @@ import { FrontDevComponent } from './components/service/front-dev/front-dev.comp
 import { BackDevComponent } from './components/service/back-dev/back-dev.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -40,15 +43,19 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     FrontDevComponent,
     BackDevComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule,
-        NgImageSliderModule,
-        MatExpansionModule,
-        MatTooltipModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    NgImageSliderModule,
+    MatExpansionModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,1 +1,49 @@
-<p>contact works!</p>
+<div class="sub-main-banner" style="background-image: url(/assets/img/sub-main-banner.jpg)">
+  <div class="overlay-half"></div>
+  <div class="sub-main-banner-content">
+    <div>
+      <h1>Contact</h1>
+      <h3><span routerLink="/home">Home /</span> <span style="color: #13E8E9"> Contact</span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="d-md-flex contact-wrapper">
+  <div class="contact-item">
+    <span class="sub-heading-1">CONTACT US</span>
+    <div class="title-1">Let’s Scale Your Brand, Together</div>
+    <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis consequatur debitis
+      dignissimos eius officiis voluptatem voluptatibus? Error esse est ex, incidunt libero tenetur velit.</p>
+    <div class="p-1" style="font-weight: bold; font-size: 20px">Contact Us</div>
+    <div class="p-1">Matara, Kamburupitiya</div>
+    <div class="p-1">info@flexi-art.com</div>
+    <div class="p-1">+94 77 343 1660</div>
+  </div>
+  <div class="contact-item" style="background-color: white">
+    <div class="title-3">Contact Us</div>
+    <p class="p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio necessitatibus repellat
+      unde.</p>
+
+    <form class="contact-form" [formGroup]="contactForm">
+
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Ex. kavindu kokila">
+      </mat-form-field>
+
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+      </mat-form-field>
+
+      <div class="d-flex" style="width: 100%">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Message</mat-label>
+          <textarea matInput formControlName="message" placeholder="Ex. Message"></textarea>
+        </mat-form-field>
+      </div>
+
+      <button class="button-5">Send Message</button>
+    </form>
+  </div>
+</div>

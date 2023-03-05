@@ -1,0 +1,26 @@
+.contact-wrapper{
+  width: 100%;
+
+  .contact-item{
+    flex: 1;
+    min-height: 200px;
+    padding: 3vw 2vw;
+    background-color: rgba(0,0,0,0.7);
+
+    .contact-form{
+      padding: 10px;
+
+      .contact-form-full-width{
+        width: 100%;
+      }
+
+      .submit-btn{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: #ccbaa4;
+        color: white;
+      }
+    }
+  }
+}
