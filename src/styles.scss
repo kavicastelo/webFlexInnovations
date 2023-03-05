@@ -254,3 +254,54 @@ body { margin: 0;
   line-height: 45px;
   list-style: url("./assets/img/asset/lnr-checkmark-circle.png");
 }
+
+//scrollbar vertical
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar:horizontal{
+  height: 24px;
+}
+::-webkit-scrollbar-track:horizontal {
+  //background-color: transparent;
+  display: none;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-button:single-button {
+  background-color: #082032;
+  display: block;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+/* Left */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  border-radius: 5px 0 0 5px;
+  height: 24px;
+  width: 24px;
+  background-position: 6px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(121, 255, 108)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(6, 222, 225)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+/* Right */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  border-radius: 0 5px 5px 0;
+  height: 24px;
+  width: 24px;
+  background-position: 6px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(121, 255, 108)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(6, 222, 225)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
