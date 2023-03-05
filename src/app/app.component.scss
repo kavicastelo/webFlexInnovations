@@ -110,4 +110,53 @@
 
 }
 
+.main-footer{
+  width: 100%;
+  min-height: 200px;
+  background-color: black;
+  overflow: hidden;
+
+  .footer-item{
+    min-height: 200px;
+    padding: 2vw 20px;
+    position: relative;
+
+    ul{
+      list-style: none;
+      line-height: 10px;
+
+      li{
+        margin: 0;
+        cursor: pointer;
+      }
+      li:hover{
+        color: #13E8E9;
+      }
+    }
+
+    img{
+      width: 100%;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .top-btn{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      z-index: 2;
+
+      .mat-icon{
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 

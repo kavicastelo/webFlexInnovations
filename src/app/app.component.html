@@ -1,57 +1,90 @@
-<div class="top-nav">
-  <a href="mailto:example@gmail.com">&nbsp;example@gmail.com</a>
+<div class="top-nav" id="top">
+  <a href="mailto:info@flexi-art.com">&nbsp;info@flexi-art.com</a>
   <span>+94 77 343 1660</span>
 </div>
 <div class="nav-div sticky-top">
 
   <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
-        <div class="container-fluid">
-          <div style="width: 100px; background-color: transparent; margin: 0 30px">
-            <img
-              src="./assets/img/logo%20white.png"
-              alt="logo" style="width: 100%" routerLink="/home">
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/about" aria-expanded="false">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/service" aria-expanded="false">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/works" aria-expanded="false">Works</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/technologies" aria-expanded="false">Technologies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/contact">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
-                <div class="dropdown-content">
-                  <a routerLink="/faq">FAQ</a>
-                  <a routerLink="/join-crew">Join our crew</a>
-                </div>
-              </li>
-            </ul>
+    <div class="container-fluid">
+      <div style="width: 100px; background-color: transparent; margin: 0 30px">
+        <img
+          src="./assets/img/logo%20white.png"
+          alt="logo" style="width: 100%" routerLink="/home">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" aria-expanded="false">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/service" aria-expanded="false">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/works" aria-expanded="false">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/technologies" aria-expanded="false">Technologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+            <div class="dropdown-content">
+              <a routerLink="/faq">FAQ</a>
+              <a routerLink="/join-crew">Join our crew</a>
+            </div>
+          </li>
+        </ul>
 
-            <button class="btn-explore" routerLink="/contact">Start a Project</button>
+        <button class="btn-explore" routerLink="/contact">Start a Project</button>
 
-          </div>
-        </div>
+      </div>
+    </div>
   </nav>
 
 </div>
 
 <router-outlet></router-outlet>
 
-<footer style="min-height: 200px; border: 1px solid blue"></footer>
+<footer class="main-footer">
+
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 footer-item">
+      <div style="width: 60%"><img src="./assets/img/logo%20white.png" alt="logo"></div>
+      <p class="p-1">We are here to give solutions for your any of digital problems and help to grow your business
+        faster and easier.</p>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 footer-item">
+      <ul>
+        <li class="sub-heading-1" style="margin-bottom: 20px">CONTACT US</li>
+        <li class="p-2">Matara, Kamburupitiya</li>
+        <li class="p-2">info@flexi-art.com</li>
+        <li class="p-2">+94 77 343 1660</li>
+      </ul>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 footer-item">
+
+      <div class="top-btn">
+        <a href="#top"><button class="button-4"><mat-icon matTooltip="Back to top">expand_less</mat-icon></button></a>
+      </div>
+
+      <ul>
+        <li class="sub-heading-1" style="margin-bottom: 20px">QUICK LINKS</li>
+        <li class="p-2" routerLink="/home">Home</li>
+        <li class="p-2" routerLink="/about">About Us</li>
+        <li class="p-2" routerLink="/contact">Contact</li>
+        <li class="p-2" routerLink="/faq">FAQ</li>
+        <li class="p-2" routerLink="/join-crew">Career Opportunities</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>

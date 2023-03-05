@@ -20,6 +20,7 @@ import { WebDevComponent } from './components/service/web-dev/web-dev.component'
 import { FrontDevComponent } from './components/service/front-dev/front-dev.component';
 import { BackDevComponent } from './components/service/back-dev/back-dev.component';
 import {MatExpansionModule} from "@angular/material/expansion";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
         BrowserAnimationsModule,
         MatIconModule,
         NgImageSliderModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatTooltipModule
     ],
   providers: [],
   bootstrap: [AppComponent]
