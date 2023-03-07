@@ -1,0 +1,33 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 10vw 3vw;
+  border: 2px solid #13E8E9;
+  border-radius: 25px;
+  padding: 3vw;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: #50d0fb;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field .mat-form-field-label {
+  color: #50d0fb !important;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background-color: #50d0fb !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+

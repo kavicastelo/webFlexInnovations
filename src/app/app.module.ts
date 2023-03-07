@@ -26,6 +26,9 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { DashbordComponent } from './components/dashbord/dashbord.component';
+import { LoginComponent } from './components/login/login.component';
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -43,23 +46,26 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MobDevComponent,
     WebDevComponent,
     FrontDevComponent,
-    BackDevComponent
+    BackDevComponent,
+    DashbordComponent,
+    LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    NgImageSliderModule,
-    MatExpansionModule,
-    MatTooltipModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatSnackBarModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        NgImageSliderModule,
+        MatExpansionModule,
+        MatTooltipModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
