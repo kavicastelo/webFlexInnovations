@@ -26,7 +26,7 @@
     <p class="p-3">Are you ready to start your project? Please contact us here. We are always ready to help you to grow
       your business in the digital world.</p>
 
-    <form class="contact-form" [formGroup]="contactForm">
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendMsg()">
 
       <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
         <mat-label>Name</mat-label>

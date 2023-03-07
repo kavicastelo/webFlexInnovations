@@ -84,9 +84,9 @@ body { margin: 0;
     }
 
     h1{
-      font-size: 5vw;
+      font-size: 7vw;
       font-weight: bold;
-      line-height: 5vw;
+      line-height: 6.5vw;
     }
 
     h3{
@@ -101,7 +101,7 @@ body { margin: 0;
       background-color: transparent;
       color: white;
       font-weight: bold;
-      font-size: 1.5vw;
+      font-size: 20px;
     }
     button:hover{
       background-color: white;
@@ -185,24 +185,27 @@ body { margin: 0;
 }
 
 .title-1{
-  font-size: 4.5vw;
+  font-size: 35px;
   color: white;
   font-weight: bold;
-  line-height: 5vw;
+  line-height: 30px;
+  margin-bottom: 20px;
 }
 
 .title-2{
-  font-size: 3vw;
-  line-height: 4vw;
+  font-size: 30px;
+  line-height: 30px;
   color: white;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .title-3{
-  font-size: 2vw;
-  line-height: 3vw;
+  font-size: 25px;
+  line-height: 25px;
   color: black;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .button-1{
@@ -279,7 +282,7 @@ body { margin: 0;
 .p-1{
   color: white;
   z-index: 2;
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
   line-height: 30px;
   margin: 20px 0;
@@ -305,8 +308,8 @@ body { margin: 0;
 
 .ul-1{
   color: white;
-  font-size: 16px;
-  line-height: 45px;
+  font-size: 15px;
+  line-height: 40px;
   list-style: url("./assets/img/asset/lnr-checkmark-circle.png");
 }
 

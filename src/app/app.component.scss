@@ -159,4 +159,15 @@
   }
 }
 
+.final-bar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13E8E9;
+  padding: 2px 50px;
 
+  p{
+    margin: 0;
+  }
+}
