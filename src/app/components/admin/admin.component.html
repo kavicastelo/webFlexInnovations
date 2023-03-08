@@ -1,8 +1,8 @@
 <div class="container">
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <button routerLink="/admin/new-users">Add New User</button>
-      <button routerLink="/admin/settings">Settings</button>
+      <button routerLink="/admin/new-users" (click)="drawer.toggle()"><mat-icon>person_add</mat-icon> Add New User</button>
+      <button routerLink="/admin/settings" (click)="drawer.toggle()"><mat-icon>settings</mat-icon>Settings</button>
     </mat-drawer>
 
     <div class="example-sidenav-content">
@@ -12,7 +12,10 @@
         </button>
       </div>
 
-      <router-outlet></router-outlet>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+
     </div>
 
   </mat-drawer-container>

@@ -13,8 +13,8 @@
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Password</mat-label>
-        <input type="email" matInput formControlName="password" placeholder="dagi-97w3-bjh@">
-        <mat-error *ngIf="loginForm.hasError('email') && !loginForm.hasError('required')">
+        <input type="password" matInput formControlName="password" placeholder="dagi-97w3-bjh@">
+        <mat-error *ngIf="!loginForm.hasError('required')">
           Please enter your password
         </mat-error>
         <mat-error *ngIf="loginForm.hasError('required')">

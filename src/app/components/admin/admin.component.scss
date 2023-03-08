@@ -7,16 +7,19 @@
 .example-sidenav-content {
   height: 100%;
   display: flex;
-  border: 1px solid red;
 
   .collapse-btn{
     width: 65px;
     height: 100%;
-    background-color: #13E8E9;
 
     button{
       margin-bottom: 300px;
     }
+  }
+
+  .content{
+    width: 100%;
+    margin: 5vw;
   }
 }
 
@@ -30,6 +33,11 @@
     height: 40px;
     background-color: black;
     color: white;
+    text-align: left;
+
+    .mat-icon{
+      font-size: 18px;
+    }
   }
   button:hover{
     background-color: #13E8E9;

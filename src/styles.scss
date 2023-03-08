@@ -273,6 +273,20 @@ body { margin: 0;
   background-color: #13E8E9;
 }
 
+.button-6{
+  border-radius: 25px;
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: transparent;
+}
+.button-6:hover{
+  background-color: #aaa;
+}
+
 .sub-heading-1{
   font-size: 15px;
   color: #13E8E9;
