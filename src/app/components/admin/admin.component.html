@@ -2,6 +2,7 @@
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <button routerLink="/admin/new-users" (click)="drawer.toggle()"><mat-icon>person_add</mat-icon> Add New User</button>
+      <button routerLink="/admin/users" (click)="drawer.toggle()"><mat-icon>group</mat-icon> Users</button>
       <button routerLink="/admin/settings" (click)="drawer.toggle()"><mat-icon>settings</mat-icon>Settings</button>
     </mat-drawer>
 

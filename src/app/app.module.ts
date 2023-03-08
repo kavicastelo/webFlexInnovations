@@ -33,6 +33,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { AddUsersComponent } from './components/admin/add-users/add-users.component';
 import { SettingComponent } from './components/admin/setting/setting.component';
+import { UsersComponent } from './components/admin/users/users.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { SettingComponent } from './components/admin/setting/setting.component';
     LoginComponent,
     AdminComponent,
     AddUsersComponent,
-    SettingComponent
+    SettingComponent,
+    UsersComponent
   ],
     imports: [
         BrowserModule,

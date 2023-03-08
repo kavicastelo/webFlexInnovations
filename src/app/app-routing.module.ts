@@ -18,6 +18,7 @@ import {LoginComponent} from "./components/login/login.component";
 import {AdminComponent} from "./components/admin/admin.component";
 import {AddUsersComponent} from "./components/admin/add-users/add-users.component";
 import {SettingComponent} from "./components/admin/setting/setting.component";
+import {UsersComponent} from "./components/admin/users/users.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path:"admin", component:AdminComponent, children:[
       {path:"", redirectTo:"/admin/new-users", pathMatch:"full"},
       {path:"new-users", component:AddUsersComponent},
+      {path:"users", component:UsersComponent},
       {path:"settings", component:SettingComponent},
     ]},
   {path:"**", component:NotFoundComponent},
