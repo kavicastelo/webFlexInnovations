@@ -15,6 +15,9 @@ import {WebDevComponent} from "./components/service/web-dev/web-dev.component";
 import {MobDevComponent} from "./components/service/mob-dev/mob-dev.component";
 import {DashbordComponent} from "./components/dashbord/dashbord.component";
 import {LoginComponent} from "./components/login/login.component";
+import {AdminComponent} from "./components/admin/admin.component";
+import {AddUsersComponent} from "./components/admin/add-users/add-users.component";
+import {SettingComponent} from "./components/admin/setting/setting.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -32,6 +35,11 @@ const routes: Routes = [
   {path:"backend-dev", component:BackDevComponent},
   {path:"dashboard", component:DashbordComponent},
   {path:"login", component:LoginComponent},
+  {path:"admin", component:AdminComponent, children:[
+      {path:"", redirectTo:"/admin/new-users", pathMatch:"full"},
+      {path:"new-users", component:AddUsersComponent},
+      {path:"settings", component:SettingComponent},
+    ]},
   {path:"**", component:NotFoundComponent},
 ];
 

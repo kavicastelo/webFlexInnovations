@@ -29,6 +29,10 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { DashbordComponent } from './components/dashbord/dashbord.component';
 import { LoginComponent } from './components/login/login.component';
 import {MatButtonModule} from "@angular/material/button";
+import { AdminComponent } from './components/admin/admin.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { AddUsersComponent } from './components/admin/add-users/add-users.component';
+import { SettingComponent } from './components/admin/setting/setting.component';
 
 
 @NgModule({
@@ -48,7 +52,10 @@ import {MatButtonModule} from "@angular/material/button";
     FrontDevComponent,
     BackDevComponent,
     DashbordComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    AddUsersComponent,
+    SettingComponent
   ],
     imports: [
         BrowserModule,
@@ -64,7 +71,8 @@ import {MatButtonModule} from "@angular/material/button";
         ReactiveFormsModule,
         HttpClientModule,
         MatSnackBarModule,
-        MatButtonModule
+        MatButtonModule,
+        MatSidenavModule
     ],
   providers: [],
   bootstrap: [AppComponent]
