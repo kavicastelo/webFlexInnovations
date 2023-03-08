@@ -1,1 +1,22 @@
-<p>setting works!</p>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-6">
+    <h1>Change Password</h1>
+    <form [formGroup]="changePassForm">
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>New Password</mat-label>
+        <input matInput formControlName="newPass" placeholder="Ex. password"/>
+      </mat-form-field>
+
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Re-Type Password</mat-label>
+        <input matInput formControlName="reNewPass" placeholder="Ex. password"/>
+      </mat-form-field>
+
+      <div class="d-flex" style="justify-content: flex-end">
+        <button class="button-6" style="width: 100px;margin-right: 10px" (click)="clear()">Clear</button>
+        <button class="button-5" style="width: 100px">Save</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6"></div>
+</div>

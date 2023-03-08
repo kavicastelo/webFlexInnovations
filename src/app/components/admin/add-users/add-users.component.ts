@@ -62,4 +62,8 @@ export class AddUsersComponent {
     this.snackBar.open(message, action,{duration:2000});
   }
 
+  clear=()=>{
+    this.addUserForm.reset()
+  }
+
 }

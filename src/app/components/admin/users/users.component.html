@@ -13,7 +13,7 @@
     <td>{{u.email}}</td>
     <td>{{u.phone}}</td>
     <td>{{u.address}}</td>
-    <td><button><mat-icon>remove</mat-icon></button></td>
+    <td><button (click)="deleteUser(u._id)"><mat-icon>remove</mat-icon></button></td>
   </tr>
   </tbody>
 </table>

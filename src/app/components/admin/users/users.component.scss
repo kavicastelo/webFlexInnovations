@@ -1,0 +1,22 @@
+table tbody td{
+  button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 100%;
+    color: red;
+
+    .mat-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  button:hover{
+    background-color: red;
+    color: white;
+  }
+}

@@ -35,7 +35,7 @@ export class UsersService {
   }
 
   public deleteUser(id:any): Observable<any> {
-    return this.http.delete(this.baseUrl + "customer/delete",{
+    return this.http.delete(this.baseUrl + "user/delete",{
       headers:{
         id:id
       }

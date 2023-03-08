@@ -31,4 +31,21 @@ export class UsersComponent {
     })
   }
 
+  deleteUser(id: any) {
+    if(confirm("Are you sure?")){
+      this.userService.deleteUser(id).subscribe(response=>{
+        this.openSnackBar('Customer Deleted!','OK');
+        this.loadUsers();
+      },error=>{
+        this.openSnackBar('Somethings Wrong! try again','OK');
+        console.log(error);
+      })
+    }
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action,{duration:2000});
+  }
+
+
 }
