@@ -34,6 +34,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { AddUsersComponent } from './components/admin/add-users/add-users.component';
 import { SettingComponent } from './components/admin/setting/setting.component';
 import { UsersComponent } from './components/admin/users/users.component';
+import { DashboardUsersComponent } from './components/dashbord/dashboard-users/dashboard-users.component';
+import { DashboardSettingComponent } from './components/dashbord/dashboard-setting/dashboard-setting.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { UsersComponent } from './components/admin/users/users.component';
     AdminComponent,
     AddUsersComponent,
     SettingComponent,
-    UsersComponent
+    UsersComponent,
+    DashboardUsersComponent,
+    DashboardSettingComponent
   ],
     imports: [
         BrowserModule,

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-setting',
-  templateUrl: './setting.component.html',
-  styleUrls: ['./setting.component.scss']
+  selector: 'app-dashboard-setting',
+  templateUrl: './dashboard-setting.component.html',
+  styleUrls: ['./dashboard-setting.component.scss']
 })
-export class SettingComponent {
+export class DashboardSettingComponent {
 
   changePassForm = new FormGroup({
     password: new FormControl(null,[

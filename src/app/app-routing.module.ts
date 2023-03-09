@@ -19,6 +19,8 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {AddUsersComponent} from "./components/admin/add-users/add-users.component";
 import {SettingComponent} from "./components/admin/setting/setting.component";
 import {UsersComponent} from "./components/admin/users/users.component";
+import {DashboardUsersComponent} from "./components/dashbord/dashboard-users/dashboard-users.component";
+import {DashboardSettingComponent} from "./components/dashbord/dashboard-setting/dashboard-setting.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -34,7 +36,11 @@ const routes: Routes = [
   {path:"web-dev", component:WebDevComponent},
   {path:"frontend-dev", component:FrontDevComponent},
   {path:"backend-dev", component:BackDevComponent},
-  {path:"dashboard", component:DashbordComponent},
+  {path:"dashboard", component:DashbordComponent, children:[
+      {path: "", redirectTo: "/dashboard/users", pathMatch: "full"},
+      {path: "users", component: DashboardUsersComponent},
+      {path: "settings", component: DashboardSettingComponent},
+    ]},
   {path:"login", component:LoginComponent},
   {path:"admin", component:AdminComponent, children:[
       {path:"", redirectTo:"/admin/new-users", pathMatch:"full"},
