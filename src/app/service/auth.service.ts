@@ -21,4 +21,5 @@ export class AuthService {
     let user = this.cookieService.get('user-token');
     return user.length !== 0; //user.length === 0?false:true
   }
+
 }

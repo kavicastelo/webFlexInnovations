@@ -36,6 +36,7 @@ import { SettingComponent } from './components/admin/setting/setting.component';
 import { UsersComponent } from './components/admin/users/users.component';
 import { DashboardUsersComponent } from './components/dashbord/dashboard-users/dashboard-users.component';
 import { DashboardSettingComponent } from './components/dashbord/dashboard-setting/dashboard-setting.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { DashboardSettingComponent } from './components/dashbord/dashboard-setti
     SettingComponent,
     UsersComponent,
     DashboardUsersComponent,
-    DashboardSettingComponent
+    DashboardSettingComponent,
+    AdminLoginComponent
   ],
     imports: [
         BrowserModule,
