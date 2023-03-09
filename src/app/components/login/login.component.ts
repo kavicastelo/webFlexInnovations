@@ -39,7 +39,10 @@ export class LoginComponent implements OnInit{
     ).subscribe(response=>{
       this.openSnackBar('Authorized','OK')
       this.cookieService.createUser(response.data.token);
-      this.route.navigateByUrl('/dashboard');
+      this.route.navigateByUrl('/dashboard/users');
+
+      // @ts-ignore
+      localStorage.setItem('email',this.loginForm.get('email')?.value)
     },error => {
       this.openSnackBar('Logging Failed! try again!','OK')
       console.log(error);

@@ -4,3 +4,7 @@ export interface User{
   address:any,
   phone:any
 }
+
+export interface Pass{
+  password:any
+}
