@@ -3,6 +3,7 @@
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <button routerLink="/dashboard/users" (click)="drawer.toggle()"><mat-icon>group</mat-icon> Users</button>
       <button routerLink="/dashboard/settings" (click)="drawer.toggle()"><mat-icon>settings</mat-icon>Settings</button>
+      <button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
     </mat-drawer>
 
     <div class="example-sidenav-content">

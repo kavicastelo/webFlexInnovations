@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ContactService} from "../../service/contact.service";
+import {VoiceRecognitionService} from "../../service/voice-recognition.service";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
@@ -10,6 +11,8 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
+  voiceBtn=false;
 
   contactForm = new FormGroup({
     name: new FormControl(null,[
@@ -25,8 +28,11 @@ export class ContactComponent implements OnInit {
   })
 
   constructor(private contactService:ContactService,
+              public voiceService:VoiceRecognitionService,
               private route:Router,
-              private snackBar:MatSnackBar) { }
+              private snackBar:MatSnackBar) {
+    this.voiceService.init()
+  }
 
   ngOnInit(): void {
   }
@@ -47,6 +53,35 @@ export class ContactComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action,{duration:2000});
+  }
+
+  startService(){
+    this.voiceService.start()
+  }
+
+  stopService(){
+    this.voiceService.stop()
+    this.patchValue();
+  }
+
+  recordBtn=()=>{
+    this.voiceBtn =! this.voiceBtn
+
+    if (this.voiceBtn){
+      this.startService()
+    }
+    else{
+      this.stopService()
+    }
+  }
+
+  patchValue=()=>{
+    // @ts-ignore
+    const textValue:string|null = document.getElementById('voice-para').textContent
+    // @ts-ignore
+    this.contactForm.patchValue({message: textValue})
+    // @ts-ignore
+    document.getElementById('voice-para').innerHTML= "";
   }
 
 }

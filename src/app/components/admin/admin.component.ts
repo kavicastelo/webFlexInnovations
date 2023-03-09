@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {LoginService} from "../../service/login.service";
 import {AuthService} from "../../service/auth.service";
 import {Router} from "@angular/router";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-admin',
@@ -14,7 +15,8 @@ export class AdminComponent {
   showFiller = false;
   constructor(private loginService:LoginService,
               private cookieService:AuthService,
-              private route:Router) { }
+              private route:Router,
+              private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
     if(this.cookieService.isExists()){
@@ -23,6 +25,16 @@ export class AdminComponent {
     else{
       this.route.navigate(['/admin-login']);
     }
+  }
+
+  logout=()=>{
+    this.cookieService.logout()
+    this.route.navigateByUrl('/login');
+    this.openSnackBar('Logged out','');
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action,{duration:2000});
   }
 
 }

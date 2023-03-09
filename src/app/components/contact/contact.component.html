@@ -41,12 +41,17 @@
       <div class="d-flex" style="width: 100%">
         <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
           <mat-label>Message</mat-label>
-          <textarea matInput formControlName="message" placeholder="Ex. Message"></textarea>
+          <textarea matInput formControlName="message" placeholder="Ex. Message" autocomplete="on"></textarea>
         </mat-form-field>
       </div>
 
+      <p class="contact-form-full-width" id="voice-para">{{voiceService.text}}</p>
+
       <button class="button-5">Send Message</button>
     </form>
+
+    <button class="button-4" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()"><mat-icon>mic</mat-icon></button>
+
   </div>
 </div>
 
