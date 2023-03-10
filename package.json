@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "angular-ai-chat-bot": "^1.1.1",
     "angular-particle": "^1.0.4",
     "jquery": "^3.6.3",
     "ng-image-slider": "^7.0.0",

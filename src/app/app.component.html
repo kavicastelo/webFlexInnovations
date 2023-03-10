@@ -1,3 +1,4 @@
+<div>
 <div class="top-nav" id="top">
   <a href="mailto:info@flexi-art.com">&nbsp;info@flexi-art.com</a>
   <span>+94 77 343 1660</span>
@@ -53,7 +54,33 @@
 
 </div>
 
-<router-outlet></router-outlet>
+
+
+<router-outlet>
+  <div class="chatBot-wrapper">
+    <div class="chatBot-btn">
+      <button class="chtClose-btn" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon style="color: white">close</mat-icon>
+      </button>
+      <button mat-fab style="background-color: #13E8E9" aria-label="Example icon button with a bookmark icon">
+        <mat-icon>smart_toy</mat-icon>
+      </button>
+
+      <div class="chatBot-container">
+        <div class="col-12 col-md-5">
+          <div class="chat">
+            <div class="app-top">
+              <span>Flexiart Chat Bot</span>
+            </div>
+            <div class="container chat-area">
+            </div>
+            <div class="message-area"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</router-outlet>
 
 <footer class="main-footer">
 
@@ -91,4 +118,6 @@
 </footer>
 <div class="final-bar">
   <p>Copyright © 2023. All Rights Received.</p>
+</div>
+
 </div>
