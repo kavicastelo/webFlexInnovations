@@ -22,7 +22,7 @@ export class ChatService {
       "projectId": environment.dialogflow.projectId,
       "requestText": textMessage.text
     }
-    return this.http.post(environment.baseUrl+'requestText', reqBody, this.httpOptions);
+    return this.http.post(environment.baseUrl+'dialogFlow/requestText', reqBody, this.httpOptions);
   }
 
 }
