@@ -37,6 +37,8 @@ import { UsersComponent } from './components/admin/users/users.component';
 import { DashboardUsersComponent } from './components/dashbord/dashboard-users/dashboard-users.component';
 import { DashboardSettingComponent } from './components/dashbord/dashboard-setting/dashboard-setting.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { ChatComponent } from './components/chat/chat/chat.component';
+import { MessageComponent } from './components/chat/message/message.component';
 
 
 @NgModule({
@@ -63,7 +65,9 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     UsersComponent,
     DashboardUsersComponent,
     DashboardSettingComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    ChatComponent,
+    MessageComponent
   ],
     imports: [
         BrowserModule,

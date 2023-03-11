@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false,
+  firstName:'Flexiart',
+  dialogflow:{
+    projectId:"flexiart-chatbot-gtqa"
+  },
   baseUrl:"http://localhost:3000/api/v1/"
 };
 
