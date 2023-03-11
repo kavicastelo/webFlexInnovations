@@ -4,6 +4,7 @@ import {Message} from "../../../dto/message";
 import {TextMessage} from "../../../dto/text-message";
 import {environment} from "../../../../environments/environment";
 import {ResponseMessage} from "../../../dto/response-message";
+import {VoiceRecognitionService} from "../../../service/voice-recognition.service";
 
 @Component({
   selector: 'app-chat',
@@ -11,6 +12,8 @@ import {ResponseMessage} from "../../../dto/response-message";
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
+
+  voiceBotBtn=false;
 
   BACK_ENABLED: boolean = true;
   @Input('messages') messages: Message[] | any;
@@ -21,7 +24,10 @@ export class ChatComponent {
 
   textInput = '';
 
-  constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService,
+              public voiceService:VoiceRecognitionService) {
+    this.voiceService.init()
+  }
 
   ngOnInit() {
   }
@@ -41,6 +47,35 @@ export class ChatComponent {
         });
     }
     this.textInput = '';
+  }
+
+  startService(){
+    this.voiceService.start()
+  }
+
+  stopService(){
+    this.voiceService.stop()
+    this.patchValue();
+  }
+
+  patchValue=()=>{
+    // @ts-ignore
+    const textValue:string = document.getElementById('voice-para').textContent;
+    // @ts-ignore
+    this.textInput = textValue;
+    // @ts-ignore
+    document.getElementById('voice-para').innerHTML= "";
+  }
+
+  recordBtn=()=>{
+    this.voiceBotBtn =! this.voiceBotBtn
+
+    if (this.voiceBotBtn){
+      this.startService()
+    }
+    else{
+      this.stopService()
+    }
   }
 
   onKey(event: any){

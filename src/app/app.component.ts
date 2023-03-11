@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'angularChatBot';
-  colorBackRight: string = '#007bff';
-  colorFontRight: string = '#ffffff';
-  colorBackLeft: string = '#eeeeee';
-  colorFontLeft: string = '#343a40';
-  messages = [];
+  title = 'Flexiart Company';
 }

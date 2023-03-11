@@ -22,6 +22,7 @@ import {UsersComponent} from "./components/admin/users/users.component";
 import {DashboardUsersComponent} from "./components/dashbord/dashboard-users/dashboard-users.component";
 import {DashboardSettingComponent} from "./components/dashbord/dashboard-setting/dashboard-setting.component";
 import {AdminLoginComponent} from "./components/admin-login/admin-login.component";
+import {ChatBotComponent} from "./components/chat-bot/chat-bot.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -50,6 +51,7 @@ const routes: Routes = [
       {path:"users", component:UsersComponent},
       {path:"settings", component:SettingComponent},
     ]},
+  {path:"chat-bot", component:ChatBotComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

@@ -5,7 +5,9 @@
                  [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
   </div>
 </div>
+<p id="voice-para" style="color: white; margin: 0">{{voiceService.text}}</p>
 <div class="input-message form-group">
-  <textarea class="input-text-message form-input" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
-  <button class="input-send" aria-hidden="true" (click)="sendMessage()"><mat-icon>send</mat-icon></button>
+  <input id="bot-input" class="input-text-message form-input" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"/>
+  <button class="input-send button-2" aria-hidden="true" (click)="recordBtn()" [ngStyle]="{'background-color':voiceBotBtn?'#aaa':'#fff'}"><mat-icon>mic</mat-icon></button>
+  <button class="input-send button-2" aria-hidden="true" (click)="sendMessage()"><mat-icon>send</mat-icon></button>
 </div>

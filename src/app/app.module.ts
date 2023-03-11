@@ -39,6 +39,7 @@ import { DashboardSettingComponent } from './components/dashbord/dashboard-setti
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { ChatComponent } from './components/chat/chat/chat.component';
 import { MessageComponent } from './components/chat/message/message.component';
+import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { MessageComponent } from './components/chat/message/message.component';
     DashboardSettingComponent,
     AdminLoginComponent,
     ChatComponent,
-    MessageComponent
+    MessageComponent,
+    ChatBotComponent
   ],
     imports: [
         BrowserModule,

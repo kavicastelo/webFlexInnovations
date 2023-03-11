@@ -1,8 +1,12 @@
 .list-messages {
   display: flex;
   flex-direction: column;
-  height: 88%;
-  overflow: auto;
+  margin: 4vw 0 0 0;
+  border: 1px solid #13E8E9;
+  height: 300px;
+  background-color: white;
+  padding: 2vw 0;
+  overflow-y: auto;
 }
 
 .left-message {
@@ -18,18 +22,32 @@
 
 .input-message {
   border-top: 2px solid grey;
-  height: 12%;
+  height: 70px;
   background-color:lightskyblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+  margin-bottom: 4vw;
 }
 
 .input-text-message {
-  height: 100%;
-  width: 80%;
+  height: 70%;
+  width: 85%;
 }
 
 .input-send {
-  color: #007bff;
-  position: relative;
+  color: #13E8E9;
   left: 7px;
   top: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+
+  .mat-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
