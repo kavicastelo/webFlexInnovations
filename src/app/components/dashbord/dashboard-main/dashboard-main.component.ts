@@ -37,8 +37,6 @@ export class DashboardMainComponent {
   private loadCustomers(){
     this.pCountService.projectCount().subscribe(response=>{
       this.selectedCount = response.data.value;
-
-      console.log(this.selectedCount)
     },error => {
       console.log(error);
     })
@@ -50,7 +48,7 @@ export class DashboardMainComponent {
       this.pCountService.updateCount({
         clients:Number(this.pCountForm.get('clients')?.value),
         projects:Number(this.pCountForm.get('projects')?.value),
-        solutions:Number(this.pCountForm.get('solutions')?.value)},this.selectedCount._id
+        solutions:Number(this.pCountForm.get('solutions')?.value)},this.selectedCount[0]._id
       ).subscribe(response=>{
         this.openSnackBar('Count Updated!','OK');
         this.loadCustomers();

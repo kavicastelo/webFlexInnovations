@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectCountService} from "../../service/project-count.service";
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  pCount:any[] = []
 
-  constructor() { }
+  constructor(private pCountService:ProjectCountService) { }
 
   ngOnInit(): void {
+    this.loadPCount()
+  }
+
+  private loadPCount(){
+    this.pCountService.projectCount().subscribe(response=>{
+      this.pCount = response.data.value;
+    },error => {
+      console.log(error);
+    })
   }
 
 }
