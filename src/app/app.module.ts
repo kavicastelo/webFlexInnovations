@@ -40,6 +40,9 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
 import { ChatComponent } from './components/chat/chat/chat.component';
 import { MessageComponent } from './components/chat/message/message.component';
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
+import { BlogComponent } from './components/blog/blog/blog.component';
+import { BlogSingle1Component } from './components/blog/blog-single1/blog-single1.component';
+import { BlogSingle2Component } from './components/blog/blog-single2/blog-single2.component';
 
 
 @NgModule({
@@ -69,7 +72,10 @@ import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
     AdminLoginComponent,
     ChatComponent,
     MessageComponent,
-    ChatBotComponent
+    ChatBotComponent,
+    BlogComponent,
+    BlogSingle1Component,
+    BlogSingle2Component
   ],
     imports: [
         BrowserModule,

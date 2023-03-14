@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 
-declare var webkitSpeechRecognition: any;
+declare let webkitSpeechRecognition: any;
 
 @Injectable({
   providedIn: 'root'
@@ -33,8 +33,8 @@ export class VoiceRecognitionService {
   }
 
   start() {
-    this.isStoppedSpeechRecog = false;
     this.recognition.start();
+    this.isStoppedSpeechRecog = false;
     console.log("Speech recognition started")
     this.recognition.addEventListener('end', (condition:any) => {
       if (this.isStoppedSpeechRecog) {
@@ -47,9 +47,9 @@ export class VoiceRecognitionService {
     });
   }
   stop() {
-    this.isStoppedSpeechRecog = true;
     this.wordConcat()
     this.recognition.stop();
+    this.isStoppedSpeechRecog = true;
     console.log("End speech recognition")
   }
 

@@ -66,13 +66,7 @@ export class ContactComponent implements OnInit {
 
   recordBtn=()=>{
     this.voiceBtn =! this.voiceBtn
-
-    if (this.voiceBtn){
-      this.startService()
-    }
-    else{
-      this.stopService()
-    }
+    this.voiceBtn?this.startService():this.stopService();
   }
 
   patchValue=()=>{

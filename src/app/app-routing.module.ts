@@ -23,6 +23,9 @@ import {DashboardUsersComponent} from "./components/dashbord/dashboard-users/das
 import {DashboardSettingComponent} from "./components/dashbord/dashboard-setting/dashboard-setting.component";
 import {AdminLoginComponent} from "./components/admin-login/admin-login.component";
 import {ChatBotComponent} from "./components/chat-bot/chat-bot.component";
+import {BlogComponent} from "./components/blog/blog/blog.component";
+import {BlogSingle1Component} from "./components/blog/blog-single1/blog-single1.component";
+import {BlogSingle2Component} from "./components/blog/blog-single2/blog-single2.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -52,6 +55,10 @@ const routes: Routes = [
       {path:"settings", component:SettingComponent},
     ]},
   {path:"chat-bot", component:ChatBotComponent},
+  {path:"blog", component:BlogComponent, children:[
+      {path: "blog-single-1", component: BlogSingle1Component},
+      {path: "blog-single-2", component: BlogSingle2Component}
+    ]},
   {path:"**", component:NotFoundComponent},
 ];
 
