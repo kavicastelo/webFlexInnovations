@@ -193,6 +193,26 @@
   </div>
 </section>
 
+<section id="project-count">
+  <div class="d-sm-flex align-items-center justify-content-center">
+    <div class="project-cont">
+      <i class='fas fa-users' style='font-size:48px;'></i>
+      <h2 *ngFor="let p of pCount"><span>{{p.clients}}</span> +</h2>
+      <span>Satisfied Clients</span>
+    </div>
+    <div class="project-cont">
+      <i class='fab fa-cloudscale' style='font-size:48px;'></i>
+      <h2 *ngFor="let p of pCount"><span>{{p.projects}}</span> +</h2>
+      <span>Projects Completed</span>
+    </div>
+    <div class="project-cont">
+      <i class='fas fa-book' style='font-size:48px;'></i>
+      <h2 *ngFor="let p of pCount"><span>{{p.solutions}}</span> +</h2>
+      <span>Business Solutions</span>
+    </div>
+  </div>
+</section>
+
 <div class="mapouter">
   <div class="gmap_canvas">
     <iframe width="100%" height="100%" id="gmap_canvas"

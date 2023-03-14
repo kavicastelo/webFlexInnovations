@@ -26,6 +26,7 @@ import {ChatBotComponent} from "./components/chat-bot/chat-bot.component";
 import {BlogComponent} from "./components/blog/blog/blog.component";
 import {BlogSingle1Component} from "./components/blog/blog-single1/blog-single1.component";
 import {BlogSingle2Component} from "./components/blog/blog-single2/blog-single2.component";
+import {DashboardMainComponent} from "./components/dashbord/dashboard-main/dashboard-main.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -42,7 +43,8 @@ const routes: Routes = [
   {path:"frontend-dev", component:FrontDevComponent},
   {path:"backend-dev", component:BackDevComponent},
   {path:"dashboard", component:DashbordComponent, children:[
-      {path: "", redirectTo: "/dashboard/users", pathMatch: "full"},
+      {path: "", redirectTo: "/dashboard/dashboard", pathMatch: "full"},
+      {path: "dashboard", component: DashboardMainComponent},
       {path: "users", component: DashboardUsersComponent},
       {path: "settings", component: DashboardSettingComponent},
     ]},

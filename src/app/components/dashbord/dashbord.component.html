@@ -1,6 +1,7 @@
 <div class="container">
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
+      <button routerLink="/dashboard/dashboard" (click)="drawer.toggle()"><mat-icon>group</mat-icon> Dashboard</button>
       <button routerLink="/dashboard/users" (click)="drawer.toggle()"><mat-icon>group</mat-icon> Users</button>
       <button routerLink="/dashboard/settings" (click)="drawer.toggle()"><mat-icon>settings</mat-icon>Settings</button>
       <button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>

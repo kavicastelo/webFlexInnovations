@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectCountService} from "../../service/project-count.service";
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  pCount:any[] = []
+
+  constructor(private pCountService:ProjectCountService) { }
 
   ngOnInit(): void {
+    this.loadPCount()
+  }
+
+  private loadPCount(){
+    this.pCountService.projectCount().subscribe(response=>{
+      this.pCount = response.data.value;
+    },error => {
+      console.log(error);
+    })
   }
 
 }
