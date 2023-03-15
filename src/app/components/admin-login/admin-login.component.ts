@@ -29,7 +29,7 @@ export class AdminLoginComponent {
 
   ngOnInit(): void {
     if(this.cookieService.isExists()){
-      this.route.navigate(['/admin']);
+      this.route.navigate(['/admin-2000-private-access']);
     }
   }
 
@@ -40,7 +40,7 @@ export class AdminLoginComponent {
     ).subscribe(response=>{
       this.openSnackBar('Authorized','OK')
       this.cookieService.createUser(response.data.token);
-      this.route.navigateByUrl('/admin');
+      this.route.navigateByUrl('/admin-2000-private-access');
 
       // @ts-ignore
       localStorage.setItem('email',this.loginForm.get('email')?.value)

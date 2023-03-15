@@ -44,6 +44,7 @@ import {BlogComponent} from './components/blog/blog/blog.component';
 import {BlogSingle1Component} from './components/blog/blog-single1/blog-single1.component';
 import {BlogSingle2Component} from './components/blog/blog-single2/blog-single2.component';
 import { DashboardMainComponent } from './components/dashbord/dashboard-main/dashboard-main.component';
+import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { DashboardMainComponent } from './components/dashbord/dashboard-main/das
     BlogComponent,
     BlogSingle1Component,
     BlogSingle2Component,
-    DashboardMainComponent
+    DashboardMainComponent,
+    AdminSigninComponent
   ],
   imports: [
     BrowserModule,

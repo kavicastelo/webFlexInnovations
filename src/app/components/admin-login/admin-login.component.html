@@ -1,6 +1,6 @@
 <div class="container">
   <div class="d-flex flex-column align-items-center justify-content-center">
-    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+    <form class="example-form" [formGroup]="loginForm">
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
         <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
@@ -21,7 +21,8 @@
           Password is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-      <button mat-raised-button color="primary" style="width: 100%">Authorize</button>
+      <button mat-raised-button color="primary" style="width: 100%; margin-bottom: 5px" (click)="login()">Authorize</button>
+      <button mat-raised-button color="warn" style="width: 100%" routerLink="/admin-sign-in">Create Account</button>
     </form>
   </div>
 </div>

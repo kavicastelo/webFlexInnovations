@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Create Account</h1>
+
+  <form class="contact-form" [formGroup]="addUserForm">
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="fullName" placeholder="Ex. kavindu kokila">
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-6">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" placeholder="Ex. +94 11 123 4567">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+        </mat-form-field>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" placeholder="Ex. asaj-sdsd-5637">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="d-flex" style="width: 100%">
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address" placeholder="Ex. 1600 Amphitheatre Pkwy"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="d-flex" style="justify-content: space-between">
+      <div>
+        <button class="button-5" style="width: 200px" routerLink="/admin-login">Back to Login</button>
+      </div>
+      <div class="d-flex">
+        <button class="button-6" style="width: 100px;margin-right: 10px" (click)="clear()">Clear</button>
+        <button class="button-5" style="width: 100px" (click)="addUser()">Create</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

@@ -18,11 +18,11 @@ export class ChatService {
   };
 
   sendMessage(textMessage: TextMessage){
-    var reqBody = {
-      "projectId": environment.dialogflow.projectId,
-      "requestText": textMessage.text
-    }
-    return this.http.post(environment.baseUrl+'dialogFlow/requestText', reqBody, this.httpOptions);
+    // var reqBody = {
+    //   "projectId": environment.dialogflow.projectId,
+    //   "requestText": textMessage.text
+    // }
+    // return this.http.post(environment.baseUrl+'dialogFlow/requestText', reqBody, this.httpOptions);
   }
 
 }

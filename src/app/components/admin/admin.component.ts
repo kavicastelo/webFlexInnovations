@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {LoginService} from "../../service/login.service";
 import {AuthService} from "../../service/auth.service";
 import {Router} from "@angular/router";
@@ -20,7 +19,7 @@ export class AdminComponent {
 
   ngOnInit(): void {
     if(this.cookieService.isExists()){
-      this.route.navigate(['/admin']);
+      this.route.navigate(['/admin-2000-private-access']);
     }
     else{
       this.route.navigate(['/admin-login']);

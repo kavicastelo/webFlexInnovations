@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AddUserService} from "../../../service/add-user.service";
-import {AuthService} from "../../../service/auth.service";
+import {AddUserService} from "../../service/add-user.service";
+import {AuthService} from "../../service/auth.service";
 import {Router} from "@angular/router";
-import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-add-users',
-  templateUrl: './add-users.component.html',
-  styleUrls: ['./add-users.component.scss']
+  selector: 'app-admin-signin',
+  templateUrl: './admin-signin.component.html',
+  styleUrls: ['./admin-signin.component.scss']
 })
-export class AddUsersComponent {
+export class AdminSigninComponent {
   addUserForm = new FormGroup({
     email: new FormControl(null,[
       Validators.required,
@@ -37,7 +37,7 @@ export class AddUsersComponent {
 
   ngOnInit(): void {
     if(this.cookieService.isExists()){
-      this.route.navigate(['/admin-2000-private-access']);
+      this.route.navigate(['/admin']);
     }
   }
 
