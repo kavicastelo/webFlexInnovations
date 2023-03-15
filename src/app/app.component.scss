@@ -121,6 +121,16 @@
     padding: 2vw 20px;
     position: relative;
 
+    i{
+      margin: 0 10px;
+      font-size: 30px;
+      color: white;
+    }
+    i:hover{
+      color: #13E8E9;
+      cursor: pointer;
+    }
+
     ul{
       list-style: none;
       line-height: 10px;

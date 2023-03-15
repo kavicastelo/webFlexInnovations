@@ -7,6 +7,16 @@
     padding: 3vw 2vw;
     background-color: rgba(0,0,0,0.7);
 
+    i{
+      margin: 0 10px;
+      font-size: 30px;
+      color: white;
+    }
+    i:hover{
+      color: #13E8E9;
+      cursor: pointer;
+    }
+
     .contact-form{
       padding: 10px;
 
