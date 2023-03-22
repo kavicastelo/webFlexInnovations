@@ -39,8 +39,13 @@ export class VoiceRecognitionService {
     console.log("Speech recognition started")
     this.recognition.addEventListener('end', (condition: any) => {
       if (this.isSpeaking && !this.isStopped) {
-        this.wordConcat();
-        this.recognition.start();
+        try {
+          this.wordConcat();
+          this.recognition.start();
+        }
+        catch (e) {
+          console.log(e)
+        }
       } else {
         this.recognition.stop();
         console.log("End speech recognition")
