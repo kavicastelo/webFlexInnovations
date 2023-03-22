@@ -28,6 +28,7 @@ import {BlogSingle1Component} from "./components/blog/blog-single1/blog-single1.
 import {BlogSingle2Component} from "./components/blog/blog-single2/blog-single2.component";
 import {DashboardMainComponent} from "./components/dashbord/dashboard-main/dashboard-main.component";
 import {AdminSigninComponent} from "./components/admin-signin/admin-signin.component";
+import {MessagesComponent} from "./components/admin/messages/messages.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -55,6 +56,7 @@ const routes: Routes = [
   {path:"admin-2000-private-access", component:AdminComponent, children:[
       {path:"", redirectTo:"/admin-2000-private-access/new-users", pathMatch:"full"},
       {path:"new-users", component:AddUsersComponent},
+      {path:"messages", component:MessagesComponent},
       {path:"users", component:UsersComponent},
       {path:"settings", component:SettingComponent},
     ]},
