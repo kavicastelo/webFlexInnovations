@@ -5,11 +5,11 @@ import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-messages',
-  templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.scss']
+  selector: 'app-dashboard-messages',
+  templateUrl: './dashboard-messages.component.html',
+  styleUrls: ['./dashboard-messages.component.scss']
 })
-export class MessagesComponent {
+export class DashboardMessagesComponent {
 
   messagesList:any[] = []
 
@@ -45,5 +45,4 @@ export class MessagesComponent {
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action,{duration:2000});
   }
-
 }

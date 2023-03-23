@@ -29,6 +29,7 @@ import {BlogSingle2Component} from "./components/blog/blog-single2/blog-single2.
 import {DashboardMainComponent} from "./components/dashbord/dashboard-main/dashboard-main.component";
 import {AdminSigninComponent} from "./components/admin-signin/admin-signin.component";
 import {MessagesComponent} from "./components/admin/messages/messages.component";
+import {DashboardMessagesComponent} from "./components/dashbord/dashboard-messages/dashboard-messages.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -49,6 +50,7 @@ const routes: Routes = [
       {path: "dashboard", component: DashboardMainComponent},
       {path: "users", component: DashboardUsersComponent},
       {path: "settings", component: DashboardSettingComponent},
+      {path: "messages", component: DashboardMessagesComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},

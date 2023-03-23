@@ -17,4 +17,12 @@ export class MessagesService {
   public messagesList(): Observable<any> {
     return this.http.get(this.baseUrl + "flexiart/messages");
   }
+
+  public deleteMessage(id:any): Observable<any> {
+    return this.http.delete(this.baseUrl + "flexiart/delete",{
+      headers:{
+        id:id
+      }
+    });
+  }
 }
