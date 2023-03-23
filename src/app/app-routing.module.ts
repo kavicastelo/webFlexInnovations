@@ -64,8 +64,8 @@ const routes: Routes = [
     ]},
   {path:"chat-bot", component:ChatBotComponent},
   {path:"blog", component:BlogComponent, children:[
-      {path: "blog-single-1", component: BlogSingle1Component},
-      {path: "blog-single-2", component: BlogSingle2Component}
+      {path: "principles_of_web_development", component: BlogSingle1Component},
+      {path: "future_technologies", component: BlogSingle2Component}
     ]},
   {path:"**", component:NotFoundComponent},
 ];

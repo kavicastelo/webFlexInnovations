@@ -282,3 +282,52 @@ df-messenger {
   --df-messenger-send-icon: #878fac;
   --df-messenger-user-message: #13E8E9;
 }
+
+//model
+::ng-deep .modal .modal-dialog .modal-content {
+  width: 350px;
+  border: 2px solid white;
+  border-radius: 0;
+  background-color: black;
+
+  .modal-header{
+    border: none;
+
+    .modal-title{
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      font-family: cursive;
+      text-align: center;
+    }
+
+    button{
+      width: 8px;
+      height: 8px;
+      background-color: white;
+    }
+  }
+
+  .modal-body{
+    border: none;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .modal-footer{
+    border: none;
+
+    button{
+      background-color: red;
+      border-radius: 30px;
+      width: 100%;
+      border: none;
+    }
+    button:hover{
+      background-color: #a00;
+    }
+  }
+
+}

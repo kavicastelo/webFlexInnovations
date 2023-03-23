@@ -8,4 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'Flexiart Company';
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+    this.buttonClick()
+  }
+
+  buttonClick(){
+    const btn= document.getElementById('main-model-btn');
+    // @ts-ignore
+    btn.click();
+  }
 }
