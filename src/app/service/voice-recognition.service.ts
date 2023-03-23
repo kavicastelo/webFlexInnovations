@@ -45,6 +45,7 @@ export class VoiceRecognitionService {
         }
         catch (e) {
           console.log(e)
+          this.recognition.resume();
         }
       } else {
         this.recognition.stop();

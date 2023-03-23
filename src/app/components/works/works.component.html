@@ -66,3 +66,44 @@
 
   </div>
 </section>
+
+<div class="d-md-flex contact-wrapper">
+  <div class="contact-item">
+    <div style="font-size: 70px; color: white;line-height: 60px">Let’s Talk About Your Project!</div>
+    <div class="p-1">Matara, Kamburupitiya</div>
+    <div class="p-1">info@flexi-art.com</div>
+    <div class="p-1">+94 77 343 1660</div>
+  </div>
+  <div class="contact-item" style="background-color: white">
+    <div class="title-3">Contact Us</div>
+    <p class="p-3">Are you ready to start your project? Please contact us here. We are always ready to help you to grow
+      your business in the digital world.</p>
+
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendMsg()">
+
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Ex. kavindu kokila">
+      </mat-form-field>
+
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+      </mat-form-field>
+
+      <div class="d-flex" style="width: 100%">
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Message</mat-label>
+          <textarea matInput formControlName="message" placeholder="Ex. Message" autocomplete="on"></textarea>
+        </mat-form-field>
+      </div>
+
+      <p class="contact-form-full-width" id="voice-para">{{voiceService.text}}</p>
+
+      <button class="button-5">Send Message</button>
+    </form>
+
+    <button class="button-4" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()"><mat-icon>mic</mat-icon></button>
+
+  </div>
+</div>
