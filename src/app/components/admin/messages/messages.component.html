@@ -1,1 +1,18 @@
-<p>messages works!</p>
+<div class="container">
+  <table class="table table-hover" style="width: 100%">
+    <thead>
+    <tr>
+      <th>Client Name</th>
+      <th>Client Email</th>
+      <th>Client Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let m of messagesList">
+      <td>{{m.fullName}}</td>
+      <td>{{m.email}}</td>
+      <td>{{m.msg}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
