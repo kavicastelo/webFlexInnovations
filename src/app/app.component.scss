@@ -311,6 +311,18 @@ df-messenger {
   .modal-body{
     border: none;
 
+    .timer {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: -1px;
+      color: white;
+    }
+    .timer span {
+      font-size: 2em;
+      margin: 0 3px 0 15px;
+    }
+
     img{
       width: 100%;
     }
