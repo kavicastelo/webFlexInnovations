@@ -4,6 +4,7 @@ import {ContactService} from "../../service/contact.service";
 import {VoiceRecognitionService} from "../../service/voice-recognition.service";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {StarRatingComponent} from "ng-starrating";
 
 @Component({
   selector: 'app-contact',

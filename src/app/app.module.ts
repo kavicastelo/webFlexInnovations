@@ -47,6 +47,7 @@ import { DashboardMainComponent } from './components/dashbord/dashboard-main/das
 import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
 import { MessagesComponent } from './components/admin/messages/messages.component';
 import { DashboardMessagesComponent } from './components/dashbord/dashboard-messages/dashboard-messages.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 
 @NgModule({
@@ -101,6 +102,7 @@ import { DashboardMessagesComponent } from './components/dashbord/dashboard-mess
     MatSnackBarModule,
     MatButtonModule,
     MatSidenavModule,
+    NgxStarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
