@@ -56,7 +56,9 @@
       <button class="button-5">Send Message</button>
     </form>
 
-    <button class="button-4" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()"><mat-icon>mic</mat-icon></button>
+    <button class="button-4" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()">
+      <mat-icon>mic</mat-icon>
+    </button>
 
   </div>
 </div>
@@ -65,7 +67,27 @@
   <div class="title-3">
     Rate Us
   </div>
+
   <ngx-star-rating [id]="'rating'"></ngx-star-rating>
+
+  <table class="table">
+    <tbody>
+    <tr>
+      <span>name</span> <br>
+      feedback Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, aspernatur cumque est iste iure iusto
+      minus sit sunt! Aperiam atque dolores earum pariatur sunt! Beatae consequatur distinctio ea eaque expedita ipsa
+      nobis ratione similique veritatis vitae. Eum, expedita, tempore.
+    </tr>
+    <tr>
+      <span>name</span> <br>
+      feedback Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, aspernatur cumque est iste iure iusto
+      minus sit sunt! Aperiam atque dolores earum pariatur sunt! Beatae consequatur distinctio ea eaque expedita ipsa
+      nobis ratione similique veritatis vitae. Eum, expedita, tempore.
+    </tr>
+    </tbody>
+  </table>
+
+  <span routerLink="/feedbacks">See more..</span>
 </div>
 
 <div class="mapouter">

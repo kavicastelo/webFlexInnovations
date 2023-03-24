@@ -30,6 +30,7 @@ import {DashboardMainComponent} from "./components/dashbord/dashboard-main/dashb
 import {AdminSigninComponent} from "./components/admin-signin/admin-signin.component";
 import {MessagesComponent} from "./components/admin/messages/messages.component";
 import {DashboardMessagesComponent} from "./components/dashbord/dashboard-messages/dashboard-messages.component";
+import {FeedbacksComponent} from "./components/feedbacks/feedbacks.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -67,6 +68,7 @@ const routes: Routes = [
       {path: "principles_of_web_development", component: BlogSingle1Component},
       {path: "future_technologies", component: BlogSingle2Component}
     ]},
+  {path:"feedbacks", component:FeedbacksComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

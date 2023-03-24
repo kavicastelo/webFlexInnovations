@@ -48,6 +48,7 @@ import { AdminSigninComponent } from './components/admin-signin/admin-signin.com
 import { MessagesComponent } from './components/admin/messages/messages.component';
 import { DashboardMessagesComponent } from './components/dashbord/dashboard-messages/dashboard-messages.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
+import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
     DashboardMainComponent,
     AdminSigninComponent,
     MessagesComponent,
-    DashboardMessagesComponent
+    DashboardMessagesComponent,
+    FeedbacksComponent
   ],
   imports: [
     BrowserModule,
