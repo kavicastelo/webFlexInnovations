@@ -49,6 +49,7 @@ import { MessagesComponent } from './components/admin/messages/messages.componen
 import { DashboardMessagesComponent } from './components/dashbord/dashboard-messages/dashboard-messages.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
+import { DashboardFeedbacksComponent } from './components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
     AdminSigninComponent,
     MessagesComponent,
     DashboardMessagesComponent,
-    FeedbacksComponent
+    FeedbacksComponent,
+    DashboardFeedbacksComponent
   ],
   imports: [
     BrowserModule,

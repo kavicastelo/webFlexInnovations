@@ -1,1 +1,54 @@
-<p>feedbacks works!</p>
+<div class="sub-main-banner" style="background-image: url(/assets/img/sub-main-banner.jpg)">
+  <div class="overlay-half"></div>
+  <div class="sub-main-banner-content">
+    <div>
+      <h1>Feedbacks</h1>
+      <h3><span routerLink="/home">Home /</span> <span style="color: #13E8E9"> Feedbacks</span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="feedback-wrapper">
+  <div class="container">
+    <div class="article-wrapper">
+      <div class="title-1">
+        How customers review us..
+      </div>
+
+      <table class="table">
+        <tbody>
+        <tr *ngFor="let f of feedbackList">
+          <span class="sub-heading-1">{{f.fullName}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{f.date}}<br>
+          {{f.msg}}
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="sub-heading-1" style="margin-top: 30px">
+        SEND US YOUR FEEDBACK
+      </div>
+
+      <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
+
+        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="Ex. kavindu kokila">
+        </mat-form-field>
+
+        <div class="d-flex" style="width: 100%">
+          <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" placeholder="Ex. Feedback" autocomplete="on"></textarea>
+          </mat-form-field>
+        </div>
+
+        <p class="contact-form-full-width" id="voice-para">{{voiceService.text}}</p>
+
+        <button class="button-3">Submit</button>
+      </form>
+      <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()">
+        <mat-icon>mic</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

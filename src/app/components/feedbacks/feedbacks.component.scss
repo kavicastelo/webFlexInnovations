@@ -1,0 +1,50 @@
+.feedback-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+
+  .table{
+    width: 100%;
+    margin-top: 5vw;
+
+    tbody{
+      tr{
+        display: block;
+        border: 2px solid #13E8E9;
+        border-radius: 20px;
+        padding: 25px 30px;
+        margin-bottom: 20px;
+        color: white;
+
+        span{
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  span:hover{
+    cursor: pointer;
+  }
+
+  .feedback-form{
+    .contact-form-full-width{
+      width: 100%;
+    }
+
+    ::ng-deep {
+      .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: #13E8E9;
+      }
+      mat-form-field {
+        .mat-hint, input, textarea, ::placeholder, .mat-form-field-label {
+          color: white;
+        }
+      }
+    }
+  }
+}

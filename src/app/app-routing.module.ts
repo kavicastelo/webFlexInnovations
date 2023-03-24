@@ -31,6 +31,7 @@ import {AdminSigninComponent} from "./components/admin-signin/admin-signin.compo
 import {MessagesComponent} from "./components/admin/messages/messages.component";
 import {DashboardMessagesComponent} from "./components/dashbord/dashboard-messages/dashboard-messages.component";
 import {FeedbacksComponent} from "./components/feedbacks/feedbacks.component";
+import {DashboardFeedbacksComponent} from "./components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -52,6 +53,7 @@ const routes: Routes = [
       {path: "users", component: DashboardUsersComponent},
       {path: "settings", component: DashboardSettingComponent},
       {path: "messages", component: DashboardMessagesComponent},
+      {path: "feedbacks", component: DashboardFeedbacksComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},
@@ -62,6 +64,7 @@ const routes: Routes = [
       {path:"messages", component:MessagesComponent},
       {path:"users", component:UsersComponent},
       {path:"settings", component:SettingComponent},
+      {path: "feedbacks", component: DashboardFeedbacksComponent},
     ]},
   {path:"chat-bot", component:ChatBotComponent},
   {path:"blog", component:BlogComponent, children:[

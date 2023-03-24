@@ -68,7 +68,11 @@
     Rate Us
   </div>
 
-  <ngx-star-rating [id]="'rating'"></ngx-star-rating>
+  <form [formGroup]="starForm">
+    <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+    <div>Rating: {{starForm.value.rating}} / 5</div>
+<!--    <p>form is valid: {{ starForm.valid ? 'true' : 'false' }}</p>-->
+  </form>
 
   <table class="table">
     <tbody>
