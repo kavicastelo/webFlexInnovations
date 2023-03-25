@@ -13,6 +13,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 export class FeedbacksComponent {
 
   voiceBtn=false;
+  isStillRecoginze = false;
 
   feedbackList:any[] = []
 
@@ -63,13 +64,12 @@ export class FeedbacksComponent {
     this.snackBar.open(message, action,{duration:2000});
   }
 
-  startService(){
-    this.voiceService.start()
+  startService() {
+    this.isStillRecoginze = this.voiceService.start() === true ? true : false;
   }
 
-  stopService(){
-    this.voiceService.stop()
-    this.patchValue();
+  stopService() {
+    this.isStillRecoginze = this.voiceService.stop() === false ? false : true;
   }
 
   recordBtn=()=>{
@@ -81,7 +81,7 @@ export class FeedbacksComponent {
     // @ts-ignore
     const textValue:string|null = document.getElementById('voice-para').textContent
     // @ts-ignore
-    this.contactForm.patchValue({message: textValue})
+    this.feedbackForm.patchValue({message: textValue})
     // @ts-ignore
     document.getElementById('voice-para').innerHTML= "";
   }

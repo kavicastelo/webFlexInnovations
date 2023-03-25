@@ -51,7 +51,11 @@
         </mat-form-field>
       </div>
 
-      <p class="contact-form-full-width" id="voice-para">{{voiceService.text}}</p>
+      <p class="contact-form-full-width" id="voice-para">{{voiceService.text}}
+        <button (click)="patchValue()" style="background-color: transparent; border: none">
+          <mat-icon>done</mat-icon>
+        </button>
+      </p>
 
       <button class="button-5">Send Message</button>
     </form>

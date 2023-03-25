@@ -70,15 +70,6 @@ export class ContactComponent implements OnInit {
     this.snackBar.open(message, action,{duration:2000});
   }
 
-  // startService(){
-  //   this.voiceService.start()
-  // }
-  //
-  // stopService(){
-  //   this.voiceService.stop()
-  //   this.patchValue();
-  // }
-
   recordBtn=()=>{
     this.voiceBtn =! this.voiceBtn
     this.voiceBtn?this.startService():this.stopService();
