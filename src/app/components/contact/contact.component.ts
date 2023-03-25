@@ -13,6 +13,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 export class ContactComponent implements OnInit {
 
   voiceBtn=false;
+  isStillRecoginze = false;
 
   starForm = new FormGroup({
     rating: new FormControl(null,[
@@ -43,6 +44,14 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  startService() {
+    this.isStillRecoginze = this.voiceService.start() === true ? true : false;
+  }
+
+  stopService() {
+    this.isStillRecoginze = this.voiceService.stop() === false ? false : true;
+  }
+
   sendMsg() {
     this.contactService.sendMail(
       this.contactForm.get('name')?.value,
@@ -61,14 +70,14 @@ export class ContactComponent implements OnInit {
     this.snackBar.open(message, action,{duration:2000});
   }
 
-  startService(){
-    this.voiceService.start()
-  }
-
-  stopService(){
-    this.voiceService.stop()
-    this.patchValue();
-  }
+  // startService(){
+  //   this.voiceService.start()
+  // }
+  //
+  // stopService(){
+  //   this.voiceService.stop()
+  //   this.patchValue();
+  // }
 
   recordBtn=()=>{
     this.voiceBtn =! this.voiceBtn
