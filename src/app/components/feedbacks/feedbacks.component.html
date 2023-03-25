@@ -55,16 +55,19 @@
         </div>
 
         <p class="contact-form-full-width" id="voice-para" style="color: white">{{voiceService.text}}
-          <button (click)="patchValue()" style="background-color: transparent; border: none; color: white">
-            <mat-icon>done</mat-icon>
-          </button>
         </p>
 
         <button class="button-3">Submit</button>
       </form>
-      <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()">
-        <mat-icon>mic</mat-icon>
-      </button>
+      <div class="d-flex">
+        <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()">
+          <mat-icon>mic</mat-icon>
+        </button>
+        <button (click)="patchValue()" style="background-color: transparent; border: none; color: white">
+          <mat-icon>done</mat-icon>
+        </button>
+      </div>
+
     </div>
   </div>
 </div>
