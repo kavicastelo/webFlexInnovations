@@ -60,6 +60,7 @@ export class ContactComponent implements OnInit {
     ).subscribe(response=>{
       this.openSnackBar('Send Success!','OK')
       this.contactForm.reset();
+      this.route.navigateByUrl("/checkout")
     },error => {
       this.openSnackBar('Send Failed! try again!','OK')
       console.log(error);

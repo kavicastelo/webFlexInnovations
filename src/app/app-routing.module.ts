@@ -32,6 +32,7 @@ import {MessagesComponent} from "./components/admin/messages/messages.component"
 import {DashboardMessagesComponent} from "./components/dashbord/dashboard-messages/dashboard-messages.component";
 import {FeedbacksComponent} from "./components/feedbacks/feedbacks.component";
 import {DashboardFeedbacksComponent} from "./components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component";
+import {CheckoutComponent} from "./components/checkout/checkout.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -72,6 +73,7 @@ const routes: Routes = [
       {path: "future_technologies", component: BlogSingle2Component}
     ]},
   {path:"feedbacks", component:FeedbacksComponent},
+  {path:"checkout", component:CheckoutComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

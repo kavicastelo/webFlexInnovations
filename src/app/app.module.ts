@@ -50,6 +50,7 @@ import { DashboardMessagesComponent } from './components/dashbord/dashboard-mess
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { DashboardFeedbacksComponent } from './components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { DashboardFeedbacksComponent } from './components/dashbord/dashboard-fee
     MessagesComponent,
     DashboardMessagesComponent,
     FeedbacksComponent,
-    DashboardFeedbacksComponent
+    DashboardFeedbacksComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
