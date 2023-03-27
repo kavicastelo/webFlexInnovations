@@ -35,6 +35,8 @@ $myCompanyFront-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+@import "~font-awesome/css/font-awesome.min.css";
+
 /*scroll bar*/
 body::-webkit-scrollbar{
   width: 4px;

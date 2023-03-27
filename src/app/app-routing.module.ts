@@ -33,6 +33,7 @@ import {DashboardMessagesComponent} from "./components/dashbord/dashboard-messag
 import {FeedbacksComponent} from "./components/feedbacks/feedbacks.component";
 import {DashboardFeedbacksComponent} from "./components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
+import {TermsComponent} from "./components/terms/terms.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -74,6 +75,7 @@ const routes: Routes = [
     ]},
   {path:"feedbacks", component:FeedbacksComponent},
   {path:"checkout", component:CheckoutComponent},
+  {path:"terms", component:TermsComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

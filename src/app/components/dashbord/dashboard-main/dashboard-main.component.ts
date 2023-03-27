@@ -43,7 +43,7 @@ export class DashboardMainComponent {
   }
 
   saveCount() {
-    if(this.selectedCount){
+    if(this.selectedCount != null){
       //update
       this.pCountService.updateCount({
         clients:Number(this.pCountForm.get('clients')?.value),

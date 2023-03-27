@@ -19,15 +19,15 @@
         <tbody>
         <tr>
           <span class="sub-heading-1">Anonymous</span> <br>
-          I strongly recommend this company to get created your projects on time.. The staff is so customer friendly. They
+          I strongly recommend this company to get created your projects on time.. The staff is so customer friendly.
+          They
           created a superb website for my online classes, it is easy to use and it worths the amount i paid to their
           company.
         </tr>
         <tr>
-          <span class="sub-heading-1">name</span> <br>
-          feedback Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, aspernatur cumque est iste iure iusto
-          minus sit sunt! Aperiam atque dolores earum pariatur sunt! Beatae consequatur distinctio ea eaque expedita ipsa
-          nobis ratione similique veritatis vitae. Eum, expedita, tempore.
+          <span class="sub-heading-1">M A T Pramuditha</span> <br>
+          I'm so glad to find flexiart company to solve my bussiness problem. They completed the task with a minimum
+          time duration, maintaining the quality of it.
         </tr>
         <tr *ngFor="let f of feedbackList">
           <span class="sub-heading-1">{{f.fullName}}</span> <br>
@@ -60,7 +60,8 @@
         <button class="button-3">Submit</button>
       </form>
       <div class="d-flex">
-        <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}" (click)="recordBtn()">
+        <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}"
+                (click)="recordBtn()">
           <mat-icon>mic</mat-icon>
         </button>
         <button (click)="patchValue()" style="background-color: transparent; border: none; color: white">

@@ -51,6 +51,7 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { DashboardFeedbacksComponent } from './components/dashbord/dashboard-feedbacks/dashboard-feedbacks.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { TermsComponent } from './components/terms/terms.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     DashboardMessagesComponent,
     FeedbacksComponent,
     DashboardFeedbacksComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
