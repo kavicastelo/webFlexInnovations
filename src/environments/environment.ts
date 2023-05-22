@@ -8,7 +8,8 @@ export const environment = {
   dialogflow:{
     projectId:"flexiart-chatbot-gtqa"
   },
-  baseUrl:"https://3.111.167.233:3269/api/v1/"
+  baseUrl:"https://flexiart.herokuapp.com/api/v1/"
+  //baseUrl:"https://3.111.167.233:3269/api/v1/"
   // baseUrl:"http://localhost:3214/api/v1/"
 };
 

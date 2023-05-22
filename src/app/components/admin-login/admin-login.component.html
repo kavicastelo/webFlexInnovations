@@ -22,7 +22,8 @@
         </mat-error>
       </mat-form-field>
       <button mat-raised-button color="primary" style="width: 100%; margin-bottom: 5px" (click)="login()">Authorize</button>
-      <button mat-raised-button color="warn" style="width: 100%" routerLink="/admin-sign-in">Create Account</button>
+      <button mat-raised-button color="warn" style="width: 100%; margin-bottom: 10px" routerLink="/admin-sign-in">Create Account</button>
+      <div class="g-signin2" data-onsuccess="onSignIn" style="width: 100%"></div>
     </form>
   </div>
 </div>
