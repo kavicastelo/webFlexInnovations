@@ -11,7 +11,8 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   styleUrls: ['./dashboard-main.component.scss']
 })
 export class DashboardMainComponent {
-  selectedCount:any;
+  selectedCount:any = [];
+  enableCount = false;
 
   pCountForm = new FormGroup({
     clients: new FormControl(null,[
@@ -31,12 +32,14 @@ export class DashboardMainComponent {
               private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
-    this.loadCustomers();
+    this.loadCount();
   }
 
-  private loadCustomers(){
+  private loadCount(){
     this.pCountService.projectCount().subscribe(response=>{
       this.selectedCount = response.data.value;
+      console.log(this.selectedCount)
+      this.enableCount = true
     },error => {
       console.log(error);
     })
@@ -51,7 +54,7 @@ export class DashboardMainComponent {
         solutions:Number(this.pCountForm.get('solutions')?.value)},this.selectedCount[0]._id
       ).subscribe(response=>{
         this.openSnackBar('Count Updated!','OK');
-        this.loadCustomers();
+        this.loadCount();
       },error => {
         console.log(error);
       })
@@ -63,7 +66,7 @@ export class DashboardMainComponent {
         solutions:Number(this.pCountForm.get('solutions')?.value)}
       ).subscribe(response=>{
         this.openSnackBar('Count Saved!','OK');
-        this.loadCustomers();
+        this.loadCount();
       },error => {
         console.log(error);
       })
