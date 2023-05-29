@@ -95,7 +95,7 @@ import { TermsComponent } from './components/terms/terms.component';
     TermsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,

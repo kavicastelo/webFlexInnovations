@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {interval, Subscription} from "rxjs";
+import { Meta } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -36,10 +37,20 @@ export class AppComponent {
     this.daysToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay));
   }
 
-  constructor() {
-  }
+  constructor(private meta: Meta) { }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'title', content: 'Flexiart Pvt.Ltd - Make your digital dreams come true' });
+    this.meta.updateTag({ name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' });
+    this.meta.updateTag({ name: 'author', content: 'flexiart' });
+    this.meta.updateTag({ name: 'robots', content: 'none' });
+    this.meta.updateTag({ httpEquiv: 'X-UA-Compatible', content: 'ie=edge' });
+    this.meta.updateTag({ name: 'description', content: 'we are help to grow customer\'s businesses faster than ever. we are helps to customers\n' +
+        '  with developing mobile and web applications' });
+    this.meta.updateTag({ name: 'keywords', content: 'web development, mobile development, software development, web application, mobile apps, software company,\n' +
+        '        best software development company, app development company, node development, mean stack, mern stack, flexible apps,\n' +
+        '        flexiart, digital flexi, web app developer, mobile app developer, flexi-art' });
+
     this.buttonClick()
 
     this.subscription = interval(1000)
