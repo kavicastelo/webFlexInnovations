@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb{
 html, body { height: 100%; }
 body { margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-image: url("./assets/img/bacground.jpg");
+  background-image: url("./assets/img/bacground.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -80,7 +80,7 @@ body { margin: 0;
     justify-content: center;
     z-index: 1;
 
-    h1,h3{
+    h1,h2{
       color: white;
       margin-bottom: 3vw;
     }
@@ -92,7 +92,7 @@ body { margin: 0;
       font-family: 'Kanit', sans-serif;
     }
 
-    h3{
+    h2{
       font-size: 1.8vw;
       line-height: 3vw;
     }

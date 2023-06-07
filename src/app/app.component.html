@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div style="width: 100px; background-color: transparent; margin: 0 30px">
           <img
-            src="./assets/img/logo%20white.png"
+            src="./assets/img/logo%20white.webp"
             alt="logo" style="width: 100%" routerLink="/home">
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -59,11 +59,11 @@
     </nav>
 
   </div>
-<!--  <div style="width: 100%; background-color: #13E8E9; padding: 5px 10px; text-align: center"-->
-<!--       class="d-flex justify-content-center align-items-center">-->
-<!--    We are updating our system and some functions cannot be work. Our apologies for your inconvenience. Contact-->
-<!--    0773431660 on whatsapp for get our service.-->
-<!--  </div>-->
+  <!--  <div style="width: 100%; background-color: #13E8E9; padding: 5px 10px; text-align: center"-->
+  <!--       class="d-flex justify-content-center align-items-center">-->
+  <!--    We are updating our system and some functions cannot be work. Our apologies for your inconvenience. Contact-->
+  <!--    0773431660 on whatsapp for get our service.-->
+  <!--  </div>-->
 
 
   <router-outlet>
@@ -86,7 +86,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="./assets/img/modal-1.png" alt="modal">
+          <img src="./assets/img/modal-1.webp" alt="modal">
           <div class="timer">
             <span id="days"> {{daysToDday}} </span>:
             <span id="hours"> {{hoursToDday}} </span>:
@@ -110,14 +110,14 @@
 
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 footer-item">
-        <div style="width: 60%"><img src="./assets/img/logo%20white.png" alt="logo"></div>
+        <div style="width: 60%"><img src="./assets/img/logo%20white.webp" alt="logo"></div>
         <p class="p-1">We are here to give solutions for your any of digital problems and help to grow your business
           faster and easier.</p>
         <div class="d-flex align-items-center justify-content-start">
-          <a href="https://web.facebook.com/profile.php?id=100091402292050"><i class='fab fa-facebook-f'></i></a>
+          <a href="https://web.facebook.com/profile.php?id=100091402292050" aria-label="facebook"><i class='fab fa-facebook-f'></i></a>
           <i class='fab fa-instagram'></i>
           <i class='fab fa-twitter'></i>
-          <a href="https://www.youtube.com/channel/UC030E93Q3gKWMMCn5rEbLHA"><i class='fab fa-youtube'></i></a>
+          <a href="https://www.youtube.com/channel/UC030E93Q3gKWMMCn5rEbLHA" aria-label="youtube"><i class='fab fa-youtube'></i></a>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 footer-item">
@@ -132,8 +132,9 @@
 
         <div class="top-btn">
           <a href="#">
-            <button class="button-4">
-              <mat-icon matTooltip="Back to top">expand_less</mat-icon>
+            <button id="top-btn" class="button-4" title="top" aria-labelledby="top-icon" aria-label="to-top"
+                    role="button">
+              <mat-icon matTooltip="Back to top" id="top-icon">expand_less</mat-icon>
             </button>
           </a>
         </div>

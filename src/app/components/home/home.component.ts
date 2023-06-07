@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   private loadPCount(){
     this.pCountService.projectCount().subscribe(response=>{
       this.pCount = response.data.value;
-      console.log(this.pCount)
+      // console.log(this.pCount)
     },error => {
       console.log(error);
     })
