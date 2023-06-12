@@ -53,6 +53,7 @@ import { DashboardFeedbacksComponent } from './components/dashbord/dashboard-fee
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { PrivacyPolicyComponent } from "./components/privacy-policy/privacy-policy.component";
+import { PricesComponent } from "./components/prices/prices.component";
 
 
 @NgModule({
@@ -94,7 +95,8 @@ import { PrivacyPolicyComponent } from "./components/privacy-policy/privacy-poli
     DashboardFeedbacksComponent,
     CheckoutComponent,
     TermsComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    PricesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

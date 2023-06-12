@@ -55,6 +55,9 @@ body { margin: 0;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 0;
+  @supports (background-image:  -webkit-image-set(url("./assets/img/bacground.webp") 1x)) {
+    .map {background-image: -webkit-image-set(url('./assets/img/bacground.webp') 1x) }
+  }
 }
 
 //main banners
