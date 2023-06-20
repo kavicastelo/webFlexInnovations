@@ -3,14 +3,68 @@
     <a href="mailto:info@flexi-art.com">&nbsp;info@flexi-art.com</a>
     <span>+94 77 343 1660</span>
   </div>
-  <div class="nav-div sticky-top">
+<!--  <div class="nav-div sticky-top">-->
 
+<!--    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">-->
+<!--      <div class="container-fluid">-->
+<!--        <div style="width: 100px; background-color: transparent; margin: 0 30px">-->
+<!--          <img-->
+<!--            src="./assets/img/logo%20white.webp"-->
+<!--            alt="logo" style="width: 100%" routerLink="/home">-->
+<!--        </div>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"-->
+<!--                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--          <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link active" (click)="onNavItemClicked()" aria-current="page" routerLink="/home">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/about" aria-expanded="false">About</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/service" aria-expanded="false">Services</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/blog" aria-expanded="false">Blog</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/works" aria-expanded="false">Works</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/technologies" aria-expanded="false">Technologies</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/contact">Contact</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--              <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>-->
+<!--              <div class="dropdown-content">-->
+<!--                <a routerLink="/faq" (click)="onNavItemClicked()">FAQ</a>-->
+<!--                <a routerLink="/feedbacks" (click)="onNavItemClicked()">Feedbacks</a>-->
+<!--                <a routerLink="/terms" (click)="onNavItemClicked()">Terms & Conditions</a>-->
+<!--                <a routerLink="/privacy" (click)="onNavItemClicked()">Privacy Policies</a>-->
+<!--                <a routerLink="/join-crew" (click)="onNavItemClicked()">Join our Team</a>-->
+<!--                <a routerLink="/login" (click)="onNavItemClicked()">Log in</a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
+
+<!--          <button class="btn-explore" routerLink="/contact">Start a Project</button>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </nav>-->
+
+<!--  </div>-->
+
+  <div class="nav-div sticky-top">
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
       <div class="container-fluid">
         <div style="width: 100px; background-color: transparent; margin: 0 30px">
-          <img
-            src="./assets/img/logo%20white.webp"
-            alt="logo" style="width: 100%" routerLink="/home">
+          <img src="./assets/img/logo%20white.webp" alt="logo" style="width: 100%" routerLink="/home">
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,47 +72,47 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/home')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/home">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/about" aria-expanded="false">About</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/about')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/service" aria-expanded="false">Services</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/service')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/service">Services</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/blog" aria-expanded="false">Blog</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/blog')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/blog">Blog</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/works" aria-expanded="false">Works</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/works')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/works">Works</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/technologies" aria-expanded="false">Technologies</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/technologies')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/technologies">Technologies</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/contact">Contact</a>
+            <li class="nav-item" [ngClass]="{'active': isActive('/contact')}">
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/contact">Contact</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" [ngClass]="{'active': isDropdownActive}">
               <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
               <div class="dropdown-content">
-                <a routerLink="/faq">FAQ</a>
-                <a routerLink="/feedbacks">Feedbacks</a>
-                <a routerLink="/terms">Terms & Conditions</a>
-                <a routerLink="/privacy">Privacy Policies</a>
-                <a routerLink="/join-crew">Join our Team</a>
-                <a routerLink="/login">Log in</a>
+                <a routerLink="/faq" (click)="onDropdownItemClicked()">FAQ</a>
+                <a routerLink="/feedbacks" (click)="onDropdownItemClicked()">Feedbacks</a>
+                <a routerLink="/terms" (click)="onDropdownItemClicked()">Terms & Conditions</a>
+                <a routerLink="/privacy" (click)="onDropdownItemClicked()">Privacy Policies</a>
+                <a routerLink="/join-crew" (click)="onDropdownItemClicked()">Join our Team</a>
+                <a routerLink="/login" (click)="onDropdownItemClicked()">Log in</a>
               </div>
             </li>
           </ul>
 
           <button class="btn-explore" routerLink="/contact">Start a Project</button>
-
         </div>
       </div>
     </nav>
-
   </div>
+
+
   <!--  <div style="width: 100%; background-color: #13E8E9; padding: 5px 10px; text-align: center"-->
   <!--       class="d-flex justify-content-center align-items-center">-->
   <!--    We are updating our system and some functions cannot be work. Our apologies for your inconvenience. Contact-->
