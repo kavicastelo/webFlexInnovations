@@ -54,6 +54,10 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { PrivacyPolicyComponent } from "./components/privacy-policy/privacy-policy.component";
 import { PricesComponent } from "./components/prices/prices.component";
+import {GraphicComponent} from "./components/service/graphic/graphic.component";
+import {MarketingComponent} from "./components/service/marketing/marketing.component";
+import {DataentryComponent} from "./components/service/dataentry/dataentry.component";
+import {TypingComponent} from "./components/service/typing/typing.component";
 
 
 @NgModule({
@@ -72,6 +76,10 @@ import { PricesComponent } from "./components/prices/prices.component";
     WebDevComponent,
     FrontDevComponent,
     BackDevComponent,
+    GraphicComponent,
+    MarketingComponent,
+    DataentryComponent,
+    TypingComponent,
     DashbordComponent,
     LoginComponent,
     AdminComponent,

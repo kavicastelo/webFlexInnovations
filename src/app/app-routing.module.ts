@@ -35,6 +35,10 @@ import {DashboardFeedbacksComponent} from "./components/dashbord/dashboard-feedb
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {TermsComponent} from "./components/terms/terms.component";
 import {PrivacyPolicyComponent} from "./components/privacy-policy/privacy-policy.component";
+import {GraphicComponent} from "./components/service/graphic/graphic.component";
+import {MarketingComponent} from "./components/service/marketing/marketing.component";
+import {DataentryComponent} from "./components/service/dataentry/dataentry.component";
+import {TypingComponent} from "./components/service/typing/typing.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -50,6 +54,10 @@ const routes: Routes = [
   {path:"web-dev", component:WebDevComponent},
   {path:"frontend-dev", component:FrontDevComponent},
   {path:"backend-dev", component:BackDevComponent},
+  {path:"graphic", component:GraphicComponent},
+  {path:"marketing", component:MarketingComponent},
+  {path:"data-entry", component:DataentryComponent},
+  {path:"typesetting", component:TypingComponent},
   {path:"dashboard", component:DashbordComponent, children:[
       {path: "", redirectTo: "/dashboard/dashboard", pathMatch: "full"},
       {path: "dashboard", component: DashboardMainComponent},
