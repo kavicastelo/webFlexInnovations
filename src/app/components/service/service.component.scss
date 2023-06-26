@@ -1,3 +1,20 @@
+@keyframes animatedBackground {
+  from {
+    background-position: center;
+  }
+  to {
+    background-position: 100% center;
+  }
+}
+#animate-area {
+  width: 200px;
+  height: 200px;
+  background-image: url(http://placekitten.com/400/200);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
+}
+
 #service-sec, #works-sec, #join-us-sec{
   margin-bottom: 70px;
 
@@ -9,6 +26,7 @@
     text-shadow: 2px 2px black;
     background-size: 350px;
     background-repeat: no-repeat;
+    animation: animatedBackground 10s linear infinite alternate;
   }
 
   .mat-icon{

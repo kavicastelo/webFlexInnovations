@@ -88,7 +88,7 @@
               <a class="nav-link" (click)="onNavItemClicked()" routerLink="/works">Works</a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('/technologies')}">
-              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/technologies">Technologies</a>
+              <a class="nav-link" (click)="onNavItemClicked()" routerLink="/pricing">Pricing</a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('/contact')}">
               <a class="nav-link" (click)="onNavItemClicked()" routerLink="/contact">Contact</a>
@@ -98,6 +98,7 @@
               <div class="dropdown-content">
                 <a routerLink="/faq" (click)="onDropdownItemClicked()">FAQ</a>
                 <a routerLink="/feedbacks" (click)="onDropdownItemClicked()">Feedbacks</a>
+                <a routerLink="/technologies" (click)="onDropdownItemClicked()">Technologies</a>
                 <a routerLink="/terms" (click)="onDropdownItemClicked()">Terms & Conditions</a>
                 <a routerLink="/privacy" (click)="onDropdownItemClicked()">Privacy Policies</a>
                 <a routerLink="/join-crew" (click)="onDropdownItemClicked()">Join our Team</a>
@@ -169,7 +170,7 @@
           faster and easier.</p>
         <div class="d-flex align-items-center justify-content-start">
           <a href="https://web.facebook.com/profile.php?id=100091402292050" aria-label="facebook"><i class='fab fa-facebook-f'></i></a>
-          <i class='fab fa-instagram'></i>
+          <a href="https://www.instagram.com/flexiart_it_solutions_/"><i class='fab fa-instagram'></i></a>
           <i class='fab fa-twitter'></i>
           <a href="https://www.youtube.com/channel/UC030E93Q3gKWMMCn5rEbLHA" aria-label="youtube"><i class='fab fa-youtube'></i></a>
         </div>
