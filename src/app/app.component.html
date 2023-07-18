@@ -123,12 +123,14 @@
 
   <router-outlet>
 
-    <df-messenger
-      intent="WELCOME"
-      chat-title="flexiart_chatbot"
-      agent-id="a1d551d3-6642-4624-ac83-dfc6e6be8f48"
-      language-code="en"
-    ></df-messenger>
+    <div [ngStyle]="{'display': consoleLogEmpty ? 'block' : 'none'}">
+      <df-messenger
+        intent="WELCOME"
+        chat-title="flexiart_chatbot"
+        agent-id="a1d551d3-6642-4624-ac83-dfc6e6be8f48"
+        language-code="en"
+      ></df-messenger>
+    </div>
 
   </router-outlet>
 

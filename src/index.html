@@ -60,7 +60,20 @@
     s1.charset = 'UTF-8';
     s1.setAttribute('crossorigin', '*');
     s0.parentNode.insertBefore(s1, s0);
+
   })();
+  window.Tawk_API.onLoad = function(){
+    var pageStatus = window.Tawk_API.getStatus();
+
+    if(pageStatus === 'online'){
+      console.log("agents are online")
+    }else if(pageStatus === 'away'){
+      console.log("away")
+    }else{
+      //nothing happen
+      console.log("offline")
+    }
+  };
 </script>
 <!--End of Tawk.to Script-->
 

@@ -28,6 +28,8 @@ export class AppComponent implements OnInit {
 
   isDropdownActive: boolean = false;
 
+  consoleLogEmpty: boolean = false;
+
   private getTimeDifference() {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
     this.allocateTimeUnits(this.timeDifference);
@@ -72,6 +74,36 @@ export class AppComponent implements OnInit {
       });
 
     this.isDropdownActive = false;
+
+
+    // Clear the console log
+    console.clear();
+
+// Create an array to store the console output
+    const consoleOutput: any[] = [];
+
+// Save the original console.log function
+    const originalConsoleLog = console.log;
+
+// Override the console.log function to capture the output
+    console.log = function (...args: any[]) {
+      originalConsoleLog.apply(console, args); // Call the original console.log function
+      consoleOutput.push(args); // Store the log output in the consoleOutput array
+    };
+
+// Delay in milliseconds before checking the console log
+    const delayInMilliseconds = 5000; // 5 minutes
+
+// Wait for the specified delay before checking the console log
+    setTimeout(() => {
+      // Check if the console output is empty
+      if (consoleOutput[0][0] === "offline") {
+        this.consoleLogEmpty = true;
+      } else {
+        this.consoleLogEmpty = false;
+      }
+    }, delayInMilliseconds);
+
   }
 
   isActive(route: string): boolean {
@@ -99,4 +131,5 @@ export class AppComponent implements OnInit {
   onNavItemClicked() {
     this.closeNavbar();
   }
+
 }
