@@ -58,7 +58,8 @@ import {GraphicComponent} from "./components/service/graphic/graphic.component";
 import {MarketingComponent} from "./components/service/marketing/marketing.component";
 import {DataentryComponent} from "./components/service/dataentry/dataentry.component";
 import {TypingComponent} from "./components/service/typing/typing.component";
-
+import {GalleryComponent} from "./components/gallery/gallery.component";
+import {LightboxModule} from "ngx-lightbox";
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import {TypingComponent} from "./components/service/typing/typing.component";
     CheckoutComponent,
     TermsComponent,
     PrivacyPolicyComponent,
-    PricesComponent
+    PricesComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -122,7 +124,8 @@ import {TypingComponent} from "./components/service/typing/typing.component";
     MatSnackBarModule,
     MatButtonModule,
     MatSidenavModule,
-    NgxStarRatingModule
+    NgxStarRatingModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

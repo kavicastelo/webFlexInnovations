@@ -1,0 +1,17 @@
+<div class="container" style="height: 100vh">
+  <div class="grid-container">
+    <div class="grid-cell" *ngFor="let image of images" (click)="openLightboxModal(image)">
+      <img [src]="image.src" [alt]="image.caption" />
+    </div>
+  </div>
+
+  <div class="lightbox-container" *ngIf="lightboxImage">
+    <div class="lightbox-close" (click)="closeLightboxModal()">&times;</div>
+    <div class="lightbox-image">
+      <img [src]="lightboxImage.src" [alt]="lightboxImage.caption" (error)="handleImageError(lightboxImage)" />
+    </div>
+    <div class="lightbox-caption">{{ lightboxImage.caption }}</div>
+  </div>
+
+</div>
+

@@ -63,6 +63,7 @@ body { margin: 0;
 //main banners
 .main-banner{
   width: 100%;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
 
@@ -89,21 +90,21 @@ body { margin: 0;
     }
 
     h1{
-      font-size: 7vw;
+      font-size: max(7vw, min(35px));
       font-weight: bold;
-      line-height: 6.5vw;
+      line-height: max(6.5vw, min(40px));
       font-family: 'Kanit', sans-serif;
     }
 
     h2{
-      font-size: 2vw;
-      line-height: 3vw;
+      font-size: max(2vw, min(20px));
+      line-height: max(3vw, min(20px))
     }
 
     button{
       border-radius: 30px;
       border: 2px solid white;
-      padding: 1.5vw 2vw;
+      padding: 15px 20px;
       background-color: transparent;
       color: white;
       font-weight: bold;
@@ -241,6 +242,7 @@ body { margin: 0;
   border: none;
 }
 .button-2:hover{
+  transition: .2s ease-in-out;
   background-color: transparent;
   border: 2px solid white;
   color: white;

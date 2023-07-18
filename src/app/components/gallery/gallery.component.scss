@@ -1,0 +1,55 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-cell {
+  position: relative;
+}
+
+.grid-cell img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.grid-cell img:hover {
+  opacity: 0.8;
+}
+
+.lightbox-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.lightbox-image {
+  max-height: 80vh;
+  max-width: 80vw;
+  object-fit: contain;
+}
+
+.lightbox-close{
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+}
+
+.lightbox-caption {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}

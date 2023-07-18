@@ -40,6 +40,7 @@ import {MarketingComponent} from "./components/service/marketing/marketing.compo
 import {DataentryComponent} from "./components/service/dataentry/dataentry.component";
 import {TypingComponent} from "./components/service/typing/typing.component";
 import {PricesComponent} from "./components/prices/prices.component";
+import {GalleryComponent} from "./components/gallery/gallery.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -88,6 +89,7 @@ const routes: Routes = [
   {path:"terms", component:TermsComponent},
   {path:"privacy", component:PrivacyPolicyComponent},
   {path:"pricing", component:PricesComponent},
+  {path:"gallery", component:GalleryComponent},
   {path:"**", component:NotFoundComponent},
 ];
 
