@@ -1,4 +1,4 @@
-<div class="container" style="height: 100vh">
+<div class="container" style="height: 100vh; overflow: auto">
   <div class="grid-container">
     <div class="grid-cell" *ngFor="let image of images" (click)="openLightboxModal(image)">
       <img [src]="image.src" [alt]="image.caption" />
