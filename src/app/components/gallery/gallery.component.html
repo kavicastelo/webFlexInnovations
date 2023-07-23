@@ -1,17 +1,32 @@
-<div class="container" style="height: 100vh; overflow: auto">
+<body oncontextmenu="return false;">
+<div class="sub-main-banner" style="background-image: url(/assets/img/sub-main-banner.jpg)">
+  <div class="overlay-half"></div>
+  <div class="sub-main-banner-content">
+    <div>
+      <h1>Gallery</h1>
+      <h3><span routerLink="/home">Home /</span> <span style="color: #13E8E9"> Gallery</span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="overflow: auto; margin-top: 30px; margin-bottom: 30px;">
   <div class="grid-container">
     <div class="grid-cell" *ngFor="let image of images" (click)="openLightboxModal(image)">
-      <img [src]="image.src" [alt]="image.caption" />
+      <img [src]="image.src" [alt]="image.caption"/>
     </div>
   </div>
 
   <div class="lightbox-container" *ngIf="lightboxImage">
     <div class="lightbox-close" (click)="closeLightboxModal()">&times;</div>
-    <div class="lightbox-image">
-      <img [src]="lightboxImage.src" [alt]="lightboxImage.caption" (error)="handleImageError(lightboxImage)" />
+    <div class="lightbox-image" style="position: relative">
+      <h1 style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; color: #dddddd; font-weight: 600;
+      font-size: 70px; opacity: .2; display: flex; align-items: center; justify-content: center">&copy;flexiart</h1>
+      <img [src]="lightboxImage.src" [alt]="lightboxImage.caption" (error)="handleImageError(lightboxImage)" id="iiimg"/>
     </div>
     <div class="lightbox-caption">{{ lightboxImage.caption }}</div>
   </div>
 
 </div>
+</body>
+
 

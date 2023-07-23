@@ -28,6 +28,11 @@
     background-repeat: no-repeat;
     animation: animatedBackground 10s linear infinite alternate;
   }
+  .service-content:hover{
+    background-color: rgba(0,0,0,0.8)!important;
+    animation: none;
+    background-image: none!important;
+  }
 
   .mat-icon{
     color: white;

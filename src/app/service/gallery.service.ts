@@ -19,9 +19,9 @@ export class GalleryService {
 
   public saveImage(g:Gallery): Observable<any> {
     return this.http.post(this.baseUrl + "gallery/save", {
-      clients:g.src,
-      projects:g.thumb,
-      solutions:g.caption
+      src:g.src,
+      thumb:g.thumb,
+      caption:g.caption
     });
   }
 

@@ -44,7 +44,6 @@ export class GalleryComponent implements OnInit{
     this.gService.getImages().subscribe(response=>{
       this.gService = response.data.value;
       this.images = response.data.value;
-      console.log(this.images)
     },error => {
       console.log(error);
     })

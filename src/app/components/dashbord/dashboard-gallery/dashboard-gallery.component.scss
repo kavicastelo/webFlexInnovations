@@ -1,0 +1,45 @@
+h1{
+  font-weight: bold;
+}
+
+.contact-form-full-width{
+  width: 100%;
+}
+
+.submit-btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ccbaa4;
+  color: white;
+}
+
+table tbody tr{
+  max-height: 100px;
+
+  td{
+    button{
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid red;
+      border-radius: 100%;
+      color: red;
+
+      .mat-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    button:hover{
+      background-color: red;
+      color: white;
+    }
+    img{
+      height: 100px;
+    }
+  }
+}

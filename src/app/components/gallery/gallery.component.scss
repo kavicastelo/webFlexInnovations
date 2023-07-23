@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
@@ -14,10 +14,7 @@
   cursor: pointer;
 }
 
-img{
-  width: 100%;
-  max-height: 80vh;
-}
+
 
 .grid-cell img:hover {
   opacity: 0.8;
@@ -42,6 +39,11 @@ img{
   max-height: 80vh;
   max-width: 80vw;
   object-fit: contain;
+
+  #iiimg {
+    width: 100%;
+    max-height: 80vh!important;
+  }
 }
 
 .lightbox-close{

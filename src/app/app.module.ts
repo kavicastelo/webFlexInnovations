@@ -60,6 +60,7 @@ import {DataentryComponent} from "./components/service/dataentry/dataentry.compo
 import {TypingComponent} from "./components/service/typing/typing.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {LightboxModule} from "ngx-lightbox";
+import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import {LightboxModule} from "ngx-lightbox";
     TermsComponent,
     PrivacyPolicyComponent,
     PricesComponent,
-    GalleryComponent
+    GalleryComponent,
+    DashboardGalleryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

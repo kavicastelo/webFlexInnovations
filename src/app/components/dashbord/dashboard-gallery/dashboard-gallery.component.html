@@ -1,0 +1,48 @@
+<form class="contact-form" [formGroup]="addImageForm" (ngSubmit)="addImage()">
+
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-6">
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Image Path</mat-label>
+        <input matInput formControlName="src" placeholder="https://www.sample.com/images/1.jpg">
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-6">
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Thumbnail Path</mat-label>
+        <input matInput formControlName="thumb" placeholder="https://www.sample.com/images/1.jpg">
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-6">
+      <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+        <mat-label>Caption</mat-label>
+        <input matInput formControlName="caption" placeholder="Image 1">
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-6">
+      <button class="button-5" style="width: 100px">Save</button>
+    </div>
+
+  </div>
+</form>
+
+<hr>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Image</th>
+    <th>Caption</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let g of imageList">
+    <td><img src="{{g.src}}" alt="{{g.caption}}"></td>
+    <td>{{g.caption}}</td>
+    <td><button (click)="deleteImage(g._id)"><mat-icon>remove</mat-icon></button></td>
+  </tr>
+  </tbody>
+</table>

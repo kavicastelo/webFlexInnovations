@@ -41,6 +41,7 @@ import {DataentryComponent} from "./components/service/dataentry/dataentry.compo
 import {TypingComponent} from "./components/service/typing/typing.component";
 import {PricesComponent} from "./components/prices/prices.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
+import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -67,6 +68,7 @@ const routes: Routes = [
       {path: "settings", component: DashboardSettingComponent},
       {path: "messages", component: DashboardMessagesComponent},
       {path: "feedbacks", component: DashboardFeedbacksComponent},
+      {path: "gallery", component: DashboardGalleryComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},
