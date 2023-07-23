@@ -15,9 +15,13 @@
         display: block;
         border: 2px solid #13E8E9;
         border-radius: 20px;
-        padding: 25px 30px;
+        padding: 15px 20px;
         margin-bottom: 20px;
         background-color: white;
+        background-image: linear-gradient(#fff 0%,#13E8E9 100%);
+        font-family: 'Kanit', sans-serif;
+        font-size: 16px;
+        color: #7f8c8d;
 
         span{
           font-weight: bold;

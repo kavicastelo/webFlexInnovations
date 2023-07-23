@@ -32,7 +32,15 @@ export class AppComponent implements OnInit {
 
   private getTimeDifference() {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
-    this.allocateTimeUnits(this.timeDifference);
+
+    if (this.dDay > new Date()) {
+      this.allocateTimeUnits(this.timeDifference);
+    }
+    else {
+      document.getElementsByClassName('timer')[0].innerHTML = "Offer Ended!";
+      document.getElementsByClassName('modal-btn')[0].innerHTML = "Request an Offer";
+    }
+    // this.allocateTimeUnits(this.timeDifference);
   }
 
   private allocateTimeUnits(timeDifference: any) {

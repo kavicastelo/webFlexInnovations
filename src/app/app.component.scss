@@ -299,6 +299,8 @@ df-messenger {
       font-weight: bold;
       font-family: cursive;
       text-align: center;
+      font-size: 4em !important;
+      line-height: 50px;
     }
 
     button{
@@ -313,14 +315,14 @@ df-messenger {
 
     .timer {
       text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
+      font-family: 'Kanit', sans-serif;
+      font-size: 2em;
       letter-spacing: -1px;
       color: white;
     }
     .timer span {
-      font-size: 2em;
       margin: 0 3px 0 15px;
+      font-family: 'Kanit', sans-serif;
     }
 
     img{

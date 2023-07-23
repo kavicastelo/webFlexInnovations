@@ -51,10 +51,13 @@
     tbody{
       tr{
         display: block;
-        border: 2px solid black;
+        border: 2px solid #7f8c8d;
         border-radius: 20px;
         padding: 25px 30px;
         margin-bottom: 20px;
+        font-family: 'Kanit', sans-serif;
+        font-size: 16px;
+        color: #7f8c8d;
 
         span{
           font-weight: bold;
