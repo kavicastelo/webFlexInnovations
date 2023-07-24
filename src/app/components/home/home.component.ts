@@ -28,20 +28,21 @@ export class HomeComponent implements OnInit {
       alt: 'frontend development'
     },
     {
-      src: './assets/img/service/data entry.png',
+      src: 'https://flexi-art.com/assets/img/service/data%20entry.png',
       alt: 'data entry'
     },
     {
       src: './assets/img/service/web.png',
       alt: 'web development'
     },
-    {
-      src: './assets/img/service/graphic.png',
-      alt: 'graphic design'
-    },
+
     {
       src: './assets/img/service/marketing.png',
       alt: 'digital marketing'
+    },
+    {
+      src: './assets/img/service/graphic.png',
+      alt: 'graphic design'
     },
     {
       src: './assets/img/service/typesetting.png',

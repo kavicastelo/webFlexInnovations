@@ -62,7 +62,11 @@ $speed: 1s;
       transition: all .1s;
       z-index: 1;
       &:hover {
-        background: #3071a9;
+        //background: #3071a9;
+        background-image: url(../../../assets/img/asset/gear.png);
+        background-size: cover;
+        transform: rotate(360deg);
+        transition: transform $speed ease-in-out;
       }
       &:focus {
         outline: none;
@@ -114,16 +118,19 @@ $speed: 1s;
             margin-left: 0;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 20vw;
             border-radius: 50%;
             text-align: center;
-            font-size: 1px;
+            font-size: 16px;
             overflow: hidden;
             cursor: pointer;
             box-shadow: none;
             transition: all $speed ease-in-out, color .1s, background .1s;
             &:hover {
               background: #f0f0f0;
+              font-size: 18px;
+              background-size: 25vw;
+              transition: font-size .3s ease-in;
             }
             &:checked {
               background: #5cb85c;
@@ -143,7 +150,7 @@ $speed: 1s;
           line-height: $optionSize;
           margin-left: -($optionSize/2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
-          font-size: 14px;
+          font-size: 16px;
           font-weight: bold;
           font-family: 'Kanit', sans-serif;
         }
