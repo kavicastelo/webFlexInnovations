@@ -1,6 +1,6 @@
 $angleStart: -360deg;
-$buttonSize: 140px;
-$optionSize: 120px;
+$buttonSize: 15vw;
+$optionSize: 15vw;
 $spacing: 20px;
 $speed: 1s;
 
@@ -112,7 +112,9 @@ $speed: 1s;
             height: 0;
             line-height: 1px;
             margin-left: 0;
-            background: #fff;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             border-radius: 50%;
             text-align: center;
             font-size: 1px;
@@ -142,6 +144,8 @@ $speed: 1s;
           margin-left: -($optionSize/2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
           font-size: 14px;
+          font-weight: bold;
+          font-family: 'Kanit', sans-serif;
         }
       }
     }

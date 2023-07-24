@@ -61,6 +61,7 @@ import {TypingComponent} from "./components/service/typing/typing.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {LightboxModule} from "ngx-lightbox";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -111,7 +112,7 @@ import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery
     DashboardGalleryComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -127,7 +128,8 @@ import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery
     MatButtonModule,
     MatSidenavModule,
     NgxStarRatingModule,
-    LightboxModule
+    LightboxModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent],

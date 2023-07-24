@@ -45,9 +45,9 @@
             <button (click)="toggleOptions()">Click here</button>
             <div class="options-wrapper" [class.open]="optionsOpen">
               <ul>
-                <li *ngFor="let i of options; let idx = index" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'">
+                <li *ngFor="let i of options; let idx = index;" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'" (click)="navigate()">
                   <input type="checkbox" [id]="i" [checked]="selectedOptions.includes(i)" (change)="onOptionChange($event, i)">
-                  <label [for]="i">Option {{ i }}</label>
+                  <label [for]="i" [title]="images[idx].alt" [ngStyle]="{'background-image':'url('+images[idx].src+')'}">{{images[idx].alt}}</label>
                 </li>
               </ul>
             </div>
