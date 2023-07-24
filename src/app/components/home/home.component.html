@@ -38,9 +38,26 @@
           development, back-end development and mobile development. Furthermore we can help you to manage databases,
           design UI/UX and etc.</p>
       </div>
-      <div class="service-content"></div>
+      <div class="service-content" style="margin-top: 30px;">
+        <div class="d-none d-md-block" style="height: 300px;">
+
+          <div class="selector">
+            <button (click)="toggleOptions()">Click here</button>
+            <div class="options-wrapper" [class.open]="optionsOpen">
+              <ul>
+                <li *ngFor="let i of options; let idx = index" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'">
+                  <input type="checkbox" [id]="i" [checked]="selectedOptions.includes(i)" (change)="onOptionChange($event, i)">
+                  <label [for]="i">Option {{ i }}</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
+    <div class="d-block d-md-none">
     <div class="d-md-flex">
       <div class="service-content" style="background-color: #40407a">
         <div class="d-flex justify-content-between align-items-center">
@@ -93,6 +110,7 @@
           applications. We mostly work with AWS and using MongoDB or Firebase to store your data.</p>
         <button class="button-2" routerLink="/backend-dev">Discover more</button>
       </div>
+    </div>
     </div>
 
   </div>

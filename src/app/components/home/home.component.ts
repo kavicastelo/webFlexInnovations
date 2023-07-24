@@ -10,6 +10,10 @@ import {Meta} from "@angular/platform-browser";
 export class HomeComponent implements OnInit {
   pCount:any[] = []
 
+  options: number[] = Array.from({ length: 8 }, (_, i) => i + 1);
+  selectedOptions: number[] = [];
+  optionsOpen = false;
+
   constructor(private pCountService:ProjectCountService, private meta: Meta) { }
 
   ngOnInit(): void {
@@ -30,10 +34,51 @@ export class HomeComponent implements OnInit {
   private loadPCount(){
     this.pCountService.projectCount().subscribe(response=>{
       this.pCount = response.data.value;
-      // console.log(this.pCount)
     },error => {
       console.log(error);
     })
+  }
+
+  getRotation(index: number): number {
+    const deg = this.options.length === 8 ? 45 : 360;
+    return this.selectedOptions.includes(index + 1) ? index * deg : -360;
+  }
+
+  toggleOptions(): void {
+    this.optionsOpen = !this.optionsOpen;
+    const checkbox = event?.target as HTMLInputElement;
+    if (this.optionsOpen) {
+      checkbox.checked = true;
+    }
+    else {
+      checkbox.checked = false;
+      // for (let i = 0; i < 8; i++) {
+      //   const index = this.selectedOptions.indexOf(i);
+      //   if (index !== -1) {
+      //     this.selectedOptions.splice(index, 1);
+      //   }
+      // }
+    }
+    for (let i = 0; i < 9; i++) {
+      this.getRotation(i);
+      this.onOptionChange(event, i);
+    }
+  }
+
+  onOptionChange(event: Event | undefined, option: number): void {
+    const checkbox = event?.target as HTMLInputElement;
+    if (checkbox) {
+      if (checkbox.checked) {
+        for (let i = 0; i < 8; i++) {
+          this.selectedOptions.push(i + 1);
+        }
+      } else {
+        const index = this.selectedOptions.indexOf(option)-1;
+        if (index !== -1) {
+          this.selectedOptions.splice(index, 1);
+        }
+      }
+    }
   }
 
 }
