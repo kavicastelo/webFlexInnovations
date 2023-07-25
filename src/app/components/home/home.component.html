@@ -50,9 +50,12 @@
             </div>
             <div class="options-wrapper" [class.open]="optionsOpen">
               <ul>
-                <li *ngFor="let i of options; let idx = index;" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'" (click)="navigate()">
-                  <input type="checkbox" [id]="i" [checked]="selectedOptions.includes(i)" (change)="onOptionChange($event, i)">
-                  <label [for]="i" [title]="images[idx].alt" [ngStyle]="{'background-image':'url('+images[idx].src+')'}">{{images[idx].alt}}</label>
+                <li *ngFor="let i of options; let idx = index;" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'"
+                    (click)="navigate()">
+                  <input type="checkbox" [id]="i" [checked]="selectedOptions.includes(i)"
+                         (change)="onOptionChange($event, i)">
+                  <label [for]="i" [title]="images[idx].alt"
+                         [ngStyle]="{'background-image':'url('+images[idx].src+')'}">{{images[idx].alt}}</label>
                 </li>
               </ul>
             </div>
@@ -63,59 +66,59 @@
     </div>
 
     <div class="d-block d-md-none">
-    <div class="d-md-flex">
-      <div class="service-content" style="background-color: #40407a">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="title-1">Mobile Development</span>
-          <div style="width: 25%" class="d-flex align-items-center justify-content-center">
-<!--            <mat-icon>phone_iphone</mat-icon>-->
-            <img src="./assets/icons/mobile-dev.webp" alt="ico" width="480">
+      <div class="d-md-flex">
+        <div class="service-content" style="background-color: #40407a">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="title-1">Mobile Development</span>
+            <div style="width: 25%" class="d-flex align-items-center justify-content-center">
+              <!--            <mat-icon>phone_iphone</mat-icon>-->
+              <img src="./assets/icons/mobile-dev.webp" alt="ico" width="480">
+            </div>
           </div>
+          <p class="p-1">We work with Java, React-native and flutter for mobile application development. We mostly work
+            with cross platform technologies.</p>
+          <button class="button-2" routerLink="/mobile-dev">Discover more</button>
         </div>
-        <p class="p-1">We work with Java, React-native and flutter for mobile application development. We mostly work
-          with cross platform technologies.</p>
-        <button class="button-2" routerLink="/mobile-dev">Discover more</button>
-      </div>
-      <div class="service-content" style="background-color: #2c3e50">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="title-1">Web Development</div>
-          <div style="width: 25%" class="d-flex align-items-center justify-content-center">
-<!--            <mat-icon>public</mat-icon>-->
-            <img src="./assets/icons/web-dev.webp" alt="ico" width="482">
+        <div class="service-content" style="background-color: #2c3e50">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="title-1">Web Development</div>
+            <div style="width: 25%" class="d-flex align-items-center justify-content-center">
+              <!--            <mat-icon>public</mat-icon>-->
+              <img src="./assets/icons/web-dev.webp" alt="ico" width="482">
+            </div>
           </div>
+          <p class="p-1">We are work with MEAN stack and MERN stack for web development. We work with wordpress also.
+            But we are mostly working with MEAN stack.</p>
+          <button class="button-2" routerLink="/web-dev">Discover more</button>
         </div>
-        <p class="p-1">We are work with MEAN stack and MERN stack for web development. We work with wordpress also.
-          But we are mostly working with MEAN stack.</p>
-        <button class="button-2" routerLink="/web-dev">Discover more</button>
       </div>
-    </div>
 
-    <div class="d-md-flex">
-      <div class="service-content" style="background-color: #227093">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="title-1">Front-end Development</span>
-          <div style="width: 25%" class="d-flex align-items-center justify-content-center">
-<!--            <mat-icon>auto_awesome_mosaic</mat-icon>-->
-            <img src="./assets/icons/frontend.png" alt="ico" width="460">
+      <div class="d-md-flex">
+        <div class="service-content" style="background-color: #227093">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="title-1">Front-end Development</span>
+            <div style="width: 25%" class="d-flex align-items-center justify-content-center">
+              <!--            <mat-icon>auto_awesome_mosaic</mat-icon>-->
+              <img src="./assets/icons/frontend.png" alt="ico" width="460">
+            </div>
           </div>
+          <p class="p-1">We make front-ends with best UI/UX designs. We are most familiar with Angular, React and React
+            native platforms. Also we work with node modules.</p>
+          <button class="button-2" routerLink="/frontend-dev">Discover more</button>
         </div>
-        <p class="p-1">We make front-ends with best UI/UX designs. We are most familiar with Angular, React and React
-          native platforms. Also we work with node modules.</p>
-        <button class="button-2" routerLink="/frontend-dev">Discover more</button>
-      </div>
-      <div class="service-content" style="background-color: #40407a">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="title-1">Back-end Development</div>
-          <div style="width: 25%" class="d-flex align-items-center justify-content-center">
-<!--            <mat-icon>dns</mat-icon>-->
-            <img src="./assets/icons/backend.webp" alt="ico" width="455">
+        <div class="service-content" style="background-color: #40407a">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="title-1">Back-end Development</div>
+            <div style="width: 25%" class="d-flex align-items-center justify-content-center">
+              <!--            <mat-icon>dns</mat-icon>-->
+              <img src="./assets/icons/backend.webp" alt="ico" width="455">
+            </div>
           </div>
+          <p class="p-1">We using Express.js, Next.js, Vue.js, Spring Boot, Java and etc. for make backends to your
+            applications. We mostly work with AWS and using MongoDB or Firebase to store your data.</p>
+          <button class="button-2" routerLink="/backend-dev">Discover more</button>
         </div>
-        <p class="p-1">We using Express.js, Next.js, Vue.js, Spring Boot, Java and etc. for make backends to your
-          applications. We mostly work with AWS and using MongoDB or Firebase to store your data.</p>
-        <button class="button-2" routerLink="/backend-dev">Discover more</button>
       </div>
-    </div>
     </div>
 
   </div>
@@ -124,13 +127,26 @@
 <section id="works-sec">
   <div class="container">
     <div class="d-md-flex">
-      <div class="service-content" style="margin-top: 30px">
+      <div class="service-content" style="position: relative">
+        <div class="hover-container" (mouseover)="toggleHoverStyles(true)" (mouseleave)="toggleHoverStyles(false)">
+          <img src="./assets/img/asset/tech_circle.webp" alt="circle" class="tech-circle">
+          <img src="./assets/img/asset/robot.webp" alt="robot" class="tech-robot"
+               style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%">
+        </div>
+      </div>
+
+      <div class="service-content"
+           style="margin-top: 60px; display: flex; flex-direction: column; align-items: flex-end">
         <span class="sub-heading-1">WORKS</span>
         <div class="title-1">Our Works</div>
-        <p class="p-1">We are a newly started company and we basically work with MEAN stack and MERN stack. We work
-          with cross platform technologies also.</p>
+        <p class="p-1">As a newly started venture, we specialize in MEAN stack and MERN stack development, providing
+          cutting-edge solutions. Our talented WordPress developers are ready to bring your vision to life. Embracing
+          cross-platform technologies, we ensure your applications reach a broader audience. Moreover, our creative team
+          is adept at handling any graphic design project, ensuring your brand stands out with exceptional visuals.
+          Partner with us for an all-encompassing experience, tailored to meet your every digital need. Let's create a
+          successful future together!</p>
       </div>
-      <div class="service-content"></div>
+
     </div>
 
     <div class="d-md-flex">
@@ -148,6 +164,8 @@
       </div>
     </div>
 
+    <div class="d-md-none d-sm-block" style="height: 10px; width: 100%;"></div>
+
     <div class="d-md-flex">
       <div class="service-content" style="background-color: #40407a">
         <span class="sub-heading-1">WEB DEVELOPMENT - HOTEL</span>
@@ -162,6 +180,8 @@
       <div class="service-content bg-images"
            style="background-image: url('./assets/img/home/work-2.webp');min-height: 320px"></div>
     </div>
+
+    <div class="d-md-none d-sm-block" style="height: 10px; width: 100%;"></div>
 
     <div class="d-md-flex">
       <div class="service-content bg-images"
@@ -203,19 +223,19 @@
 <section id="project-count">
   <div class="d-sm-flex align-items-center justify-content-center">
     <div class="project-cont">
-<!--      <i class='fas fa-users' style='font-size:48px;'></i>-->
+      <!--      <i class='fas fa-users' style='font-size:48px;'></i>-->
       <img src="./assets/icons/clients.png" alt="ico" width="100" height="100">
       <h2 *ngFor="let p of pCount"><span>{{p.clients}}</span> +</h2>
       <span class="count-title">Satisfied Clients</span>
     </div>
     <div class="project-cont">
-<!--      <i class='fab fa-cloudscale' style='font-size:48px;'></i>-->
+      <!--      <i class='fab fa-cloudscale' style='font-size:48px;'></i>-->
       <img src="./assets/icons/completed%20projects.png" alt="ico" width="100" height="100">
       <h2 *ngFor="let p of pCount"><span>{{p.projects}}</span> +</h2>
       <span class="count-title">Projects Completed</span>
     </div>
     <div class="project-cont">
-<!--      <i class='fas fa-book' style='font-size:48px;'></i>-->
+      <!--      <i class='fas fa-book' style='font-size:48px;'></i>-->
       <img src="./assets/icons/solutions.png" alt="ico" width="100" height="100">
       <h2 *ngFor="let p of pCount"><span>{{p.solutions}}</span> +</h2>
       <span class="count-title">Business Solutions</span>

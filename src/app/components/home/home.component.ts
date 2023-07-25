@@ -11,6 +11,8 @@ import {Router} from "@angular/router";
 export class HomeComponent implements OnInit {
   pCount: any[] = []
 
+  hovered = false;
+
   options: number[] = Array.from({length: 8}, (_, i) => i + 1);
   selectedOptions: number[] = [];
   optionsOpen = false;
@@ -128,5 +130,10 @@ export class HomeComponent implements OnInit {
 
   navigate() {
     this.router.navigate(['/service']);
+  }
+
+  toggleHoverStyles(hovering: boolean): void {
+    this.hovered = hovering;
+    console.log(hovering);
   }
 }

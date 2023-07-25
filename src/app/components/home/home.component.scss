@@ -17,11 +17,28 @@ $speed: 1s;
   }
 }
 @keyframes rotate-360 {
-  0% {
+  to {
+    transform: rotate(360deg);
+  }
+  from {
     transform: rotate(0deg);
   }
+}
+@keyframes rotate-tech {
+  0% {
+    transform: rotate(0deg) scale(1,1);
+  }
+  25%{
+    transform: rotate(90deg) scale(1.2,1.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1,1);
+  }
+  75%{
+    transform: rotate(270deg) scale(.8,.8);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1,1);
   }
 }
 
@@ -44,6 +61,27 @@ $speed: 1s;
     flex: 1;
     width: 100%;
     padding: 3vw;
+
+    .tech-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .tech-robot {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+  .service-content:hover .tech-circle {
+    animation: rotate-tech 5s linear infinite;
+    will-change: transform;
+    transform-style: preserve-3d;
   }
 
   .mat-icon{
@@ -99,7 +137,7 @@ $speed: 1s;
       animation: zoom-in-zoom-out $speed ease-out infinite;
       &:hover {
         //background: #3071a9;
-        background-image: url(../../../assets/img/asset/gear.png);
+        background-image: url(../../../assets/img/asset/gear.webp);
         background-size: cover;
         animation: rotate-360 $speed ease-in-out;
       }
