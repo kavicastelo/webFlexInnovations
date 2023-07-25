@@ -42,7 +42,12 @@
         <div class="d-none d-md-block" style="height: 300px;">
 
           <div class="selector">
+            <div class="shape-1"></div>
             <button (click)="toggleOptions()">Click here</button>
+            <div class="d-flex justify-content-between">
+              <div class="shape-2"></div>
+              <div class="shape-1"></div>
+            </div>
             <div class="options-wrapper" [class.open]="optionsOpen">
               <ul>
                 <li *ngFor="let i of options; let idx = index;" [style.transform]="'rotate('+ getRotation(idx) + 'deg)'" (click)="navigate()">

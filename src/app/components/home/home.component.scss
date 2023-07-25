@@ -4,6 +4,27 @@ $optionSize: 15vw;
 $spacing: 20px;
 $speed: 1s;
 
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    background-image: radial-gradient(circle at 50% 50%, #13e8e9, #1b85c9, #3071a9);
+  }
+}
+@keyframes rotate-360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #about-sec{
   .about-content{
     min-height: 200px;
@@ -42,8 +63,22 @@ $speed: 1s;
     top: 50%;
     width: $buttonSize;
     height: $buttonSize;
-    margin-top: -$buttonSize/2;
-    margin-left: -$buttonSize/2;
+    margin-top: - calc($buttonSize/2);
+    margin-left: - calc($buttonSize/2);
+
+    .shape-1, .shape-2{
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: #428bca;
+      background-image: radial-gradient(circle at 50% 50%, #3071a9, #1b85c9, #13e8e9, #1b85c9);
+      animation: zoom-in-zoom-out 3s ease-out infinite;
+    }
+    .shape-2{
+      width: 70px;
+      height: 70px;
+      animation-delay: 1s;
+    }
 
     button {
       font-family: 'Oswald', sans-serif;
@@ -61,12 +96,12 @@ $speed: 1s;
       box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
       transition: all .1s;
       z-index: 1;
+      animation: zoom-in-zoom-out $speed ease-out infinite;
       &:hover {
         //background: #3071a9;
         background-image: url(../../../assets/img/asset/gear.png);
         background-size: cover;
-        transform: rotate(360deg);
-        transition: transform $speed ease-in-out;
+        animation: rotate-360 $speed ease-in-out;
       }
       &:focus {
         outline: none;
@@ -97,7 +132,7 @@ $speed: 1s;
           width: 0;
           height: 100%;
           margin: 0 50%;
-          //transform-origin: 50% 100%;
+          transform-origin: 50% 65%;
           transition: all $speed ease-in-out;
 
           &.rotate {
@@ -148,7 +183,7 @@ $speed: 1s;
           width: $optionSize;
           height: $optionSize;
           line-height: $optionSize;
-          margin-left: -($optionSize/2);
+          margin-left: - calc($optionSize/2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
           font-size: 16px;
           font-weight: bold;
