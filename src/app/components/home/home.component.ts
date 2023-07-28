@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
   pCount: any[] = []
+  loadingCount = true;
 
   hovered = false;
 
@@ -82,8 +83,10 @@ export class HomeComponent implements OnInit {
   private loadPCount() {
     this.pCountService.projectCount().subscribe(response => {
       this.pCount = response.data.value;
+      this.loadingCount = false;
     }, error => {
       console.log(error);
+      this.loadingCount = true;
     })
   }
 

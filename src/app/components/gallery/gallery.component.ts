@@ -11,8 +11,8 @@ import {GalleryService} from "../../service/gallery.service";
 export class GalleryComponent implements OnInit{
 
   images:IAlbum[] = [];
-
   lightboxImage: IAlbum | undefined;
+  loadingImages = true;
 
   constructor(private lightbox: Lightbox, private gService: GalleryService) {}
 
@@ -44,8 +44,10 @@ export class GalleryComponent implements OnInit{
     this.gService.getImages().subscribe(response=>{
       this.gService = response.data.value;
       this.images = response.data.value;
+      this.loadingImages = false;
     },error => {
       console.log(error);
+      this.loadingImages = true;
     })
   }
 

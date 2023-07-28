@@ -9,6 +9,7 @@ import {ProjectCountService} from "../../service/project-count.service";
 export class AboutComponent implements OnInit {
 
   pCount:any[] = []
+  loadingCount = true;
 
   constructor(private pCountService:ProjectCountService) { }
 
@@ -19,8 +20,10 @@ export class AboutComponent implements OnInit {
   private loadPCount(){
     this.pCountService.projectCount().subscribe(response=>{
       this.pCount = response.data.value;
+      this.loadingCount = false;
     },error => {
       console.log(error);
+      this.loadingCount = true;
     })
   }
 

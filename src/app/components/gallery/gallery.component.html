@@ -10,6 +10,11 @@
 </div>
 
 <div class="container" style="overflow: auto; margin-top: 30px; margin-bottom: 30px;">
+
+  <div *ngIf="loadingImages" style="display: flex; justify-content: center; align-items: center; height: auto; background-color: black; border-radius: 40px 0 40px 0;">
+    <img src="./assets/img/asset/loading.gif" alt="loading" title="Loading...">
+  </div>
+
   <div class="grid-container">
     <div class="grid-cell" *ngFor="let image of images" (click)="openLightboxModal(image)">
       <img [src]="image.src" [alt]="image.caption"/>
