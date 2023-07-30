@@ -5,6 +5,7 @@ import {Observable} from "rxjs";
 import {User} from "../dto/Users"
 import {Pass} from "../dto/Users"
 import {Verify} from "../dto/Users"
+import {FormControl, ɵFormGroupRawValue, ɵGetProperty, ɵTypedOrUntyped} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,22 @@ export class UsersService {
 
   public addVerify(): Observable<any> {
     return this.http.get(this.baseUrl + "user/twofactorsetup");
+  }
+
+  public verifyCode(token: any): Observable<any> {
+    return this.http.post(this.baseUrl + "user/verify",{
+      userToken: parseInt(token)
+    });
+  }
+
+  public firstVerify(u:User,id:any): Observable<any> {
+    return this.http.put(this.baseUrl + "user/firstVerify", {
+      email:u.email,
+      fullName:u.fullName,
+      phone:u.phone,
+      address:u.address,
+      verified:true
+    },{headers:{id:id}});
   }
 
 }

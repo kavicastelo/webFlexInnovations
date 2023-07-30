@@ -38,7 +38,7 @@ export class DashboardMainComponent {
   private loadCount(){
     this.pCountService.projectCount().subscribe(response=>{
       this.selectedCount = response.data.value;
-      console.log(this.selectedCount)
+      // console.log(this.selectedCount)
       this.enableCount = true
     },error => {
       console.log(error);
