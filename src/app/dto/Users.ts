@@ -8,3 +8,8 @@ export interface User{
 export interface Pass{
   password:any
 }
+
+export interface Verify{
+  img:any,
+  code:any
+}

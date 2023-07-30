@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {User} from "../dto/Users"
 import {Pass} from "../dto/Users"
+import {Verify} from "../dto/Users"
 
 @Injectable({
   providedIn: 'root'
@@ -51,6 +52,10 @@ export class UsersService {
 
   public usersIdsList(): Observable<any> {
     return this.http.get(this.baseUrl + "customer/id-list");
+  }
+
+  public addVerify(): Observable<any> {
+    return this.http.get(this.baseUrl + "user/twofactorsetup");
   }
 
 }

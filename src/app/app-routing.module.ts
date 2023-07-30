@@ -42,6 +42,7 @@ import {TypingComponent} from "./components/service/typing/typing.component";
 import {PricesComponent} from "./components/prices/prices.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
+import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -69,6 +70,7 @@ const routes: Routes = [
       {path: "messages", component: DashboardMessagesComponent},
       {path: "feedbacks", component: DashboardFeedbacksComponent},
       {path: "gallery", component: DashboardGalleryComponent},
+      {path: "verify", component: DashboardVerifyComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},

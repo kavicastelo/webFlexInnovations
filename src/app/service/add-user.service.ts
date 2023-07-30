@@ -18,7 +18,8 @@ export class AddUserService {
       password: password,
       fullName: fullName,
       phone:phone,
-      address:address
+      address:address,
+      verified: false
     });
   }
 }

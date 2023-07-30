@@ -62,6 +62,7 @@ import {GalleryComponent} from "./components/gallery/gallery.component";
 import {LightboxModule} from "ngx-lightbox";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 import {NgOptimizedImage} from "@angular/common";
+import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import {NgOptimizedImage} from "@angular/common";
     PrivacyPolicyComponent,
     PricesComponent,
     GalleryComponent,
-    DashboardGalleryComponent
+    DashboardGalleryComponent,
+    DashboardVerifyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
