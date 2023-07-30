@@ -4,6 +4,7 @@ import {LoginService} from "../../service/login.service";
 import {AuthService} from "../../service/auth.service";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {UsersService} from "../../service/users.service";
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit{
   })
 
   constructor(private loginService:LoginService,
+              private userService:UsersService,
               private cookieService:AuthService,
               private route:Router,
               private snackBar:MatSnackBar) { }
@@ -37,10 +39,19 @@ export class LoginComponent implements OnInit{
       this.loginForm.get('email')?.value,
       this.loginForm.get('password')?.value
     ).subscribe(response=>{
-      this.openSnackBar('Authorized','OK')
-      this.cookieService.createUser(response.data.token);
-      this.route.navigateByUrl('/dashboard/users');
-
+      this.userService.getUser(this.loginForm.get('email')?.value).subscribe(response=>{
+        if (response !== null) {
+          if (response.data.value.verified){
+            // open authorizing page
+            console.log("Authorized");
+          }
+          else{
+            this.openSnackBar('Authorized','OK')
+            this.cookieService.createUser(response.data.token);
+            this.route.navigateByUrl('/dashboard/users');
+          }
+        }
+      });
       // @ts-ignore
       localStorage.setItem('email',this.loginForm.get('email')?.value)
     },error => {
