@@ -43,6 +43,7 @@ import {PricesComponent} from "./components/prices/prices.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
+import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-step-authorize.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -94,6 +95,7 @@ const routes: Routes = [
   {path:"privacy", component:PrivacyPolicyComponent},
   {path:"pricing", component:PricesComponent},
   {path:"gallery", component:GalleryComponent},
+  {path:"authorize", component:TwoStepAuthorizeComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

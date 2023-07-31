@@ -63,6 +63,7 @@ import {LightboxModule} from "ngx-lightbox";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 import {NgOptimizedImage} from "@angular/common";
 import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
+import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-step-authorize.component";
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/d
     PricesComponent,
     GalleryComponent,
     DashboardGalleryComponent,
-    DashboardVerifyComponent
+    DashboardVerifyComponent,
+    TwoStepAuthorizeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

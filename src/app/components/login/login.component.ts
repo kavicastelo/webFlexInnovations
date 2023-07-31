@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit{
         if (response !== null) {
           if (response.data.value.verified){
             // open authorizing page
-            console.log("Authorized");
+            // @ts-ignore
+            localStorage.setItem("authEmail",this.loginForm.get('email')?.value);
+            this.route.navigateByUrl('/authorize');
           }
           else{
             this.openSnackBar('Authorized','OK')

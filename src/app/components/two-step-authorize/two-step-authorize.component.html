@@ -1,0 +1,11 @@
+<div class="container" style="background-color: white; padding: 5vw 2vw">
+  <h1 style="font-size: 40px; font-weight: 600">Authorization Required</h1>
+  <h3>Enter your authenticator app password here:</h3>
+  <div class="d-flex">
+    <input type="number" id="verify_code">
+    <button type="submit" style="border: none; background-color: #1b85c9; color: white; padding: 10px 15px" (click)="authorized()">Submit</button>
+  </div>
+  <div *ngIf="errorMessage" style="color: red">Authenticator Password Mismatched! Try Again!</div>
+
+</div>
+

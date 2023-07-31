@@ -71,7 +71,7 @@ export class DashboardVerifyComponent {
       })
     ).subscribe(response => {
       if (response.data !== null) {
-        console.log(response);
+        // console.log(response);
         if (response.success) {
           this.usersService.firstVerify({
             email: this.selectedUser.email,
