@@ -15,6 +15,8 @@ export class WorksComponent implements OnInit {
   voiceBtn=false;
   isStillRecoginze = false;
 
+  loading:boolean = false;
+
   contactForm = new FormGroup({
     name: new FormControl(null,[
       Validators.required
@@ -39,14 +41,17 @@ export class WorksComponent implements OnInit {
   }
 
   sendMsg() {
+    this.loading = true;
     this.contactService.sendMail(
       this.contactForm.get('name')?.value,
       this.contactForm.get('email')?.value,
       this.contactForm.get('message')?.value
     ).subscribe(response=>{
+      this.loading = false;
       this.openSnackBar('Send Success!','OK')
       this.contactForm.reset();
     },error => {
+      this.loading = false;
       this.openSnackBar('Send Failed! try again!','OK')
       console.log(error);
     })
