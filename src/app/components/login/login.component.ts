@@ -12,6 +12,8 @@ import {UsersService} from "../../service/users.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit{
+  loading:boolean = false;
+
   loginForm = new FormGroup({
     email: new FormControl(null,[
       Validators.required,
@@ -35,6 +37,7 @@ export class LoginComponent implements OnInit{
   }
 
   login() {
+    this.loading = true;
     this.loginService.login(
       this.loginForm.get('email')?.value,
       this.loginForm.get('password')?.value
@@ -42,12 +45,14 @@ export class LoginComponent implements OnInit{
       this.userService.getUser(this.loginForm.get('email')?.value).subscribe(response=>{
         if (response !== null) {
           if (response.data.value.verified){
+            this.loading = false;
             // open authorizing page
             // @ts-ignore
             localStorage.setItem("authEmail",this.loginForm.get('email')?.value);
             this.route.navigateByUrl('/authorize');
           }
           else{
+            this.loading = false;
             this.openSnackBar('Authorized','OK')
             this.cookieService.createUser(response.data.token);
             this.route.navigateByUrl('/dashboard/users');
@@ -57,6 +62,7 @@ export class LoginComponent implements OnInit{
       // @ts-ignore
       localStorage.setItem('email',this.loginForm.get('email')?.value)
     },error => {
+      this.loading = false;
       this.openSnackBar('Logging Failed! try again!','OK')
       console.log(error);
     })

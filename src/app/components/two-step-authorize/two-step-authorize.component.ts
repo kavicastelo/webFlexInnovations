@@ -46,7 +46,7 @@ export class TwoStepAuthorizeComponent {
       })
     ).subscribe(response => {
       if (response !== null) {
-        console.log(response);
+        // console.log(response);
         if (response.success && response.success !== undefined){
           code.value = '';
           this.cookieService.createUser(this.token);

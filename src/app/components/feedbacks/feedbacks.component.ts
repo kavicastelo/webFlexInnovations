@@ -17,6 +17,8 @@ export class FeedbacksComponent {
 
   feedbackList:any[] = []
 
+  loading:boolean = false;
+
   feedbackForm = new FormGroup({
     name: new FormControl(null,[
       Validators.required
@@ -38,15 +40,18 @@ export class FeedbacksComponent {
   }
 
   sendFeedback() {
+    this.loading = true;
     this.feedbackService.sendFeedback(
       this.feedbackForm.get('name')?.value,
       this.feedbackForm.get('message')?.value,
       new Date()
     ).subscribe(response=>{
+      this.loading = false;
       this.openSnackBar('Send Success!','OK')
       this.loadFeedbacks()
       this.feedbackForm.reset();
     },error => {
+      this.loading = false;
       this.openSnackBar('Send Failed! try again!','OK')
       console.log(error);
     })

@@ -32,6 +32,16 @@
     <p class="p-3">Are you ready to start your project? Please contact us here. We are always ready to help you to grow
       your business in the digital world.</p>
 
+    <div *ngIf="loading" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+      <div class="d-flex align-items-center justify-content-center w-100 h-100">
+        <div class="d-flex flex-column align-items-center justify-content-center"
+             style="width: 80%; padding: 30px; border: 1px solid #13E8E9; border-radius: 25px; background-color: rgba(255,255,255,.5)">
+          <img src="./assets/img/asset/small_loading.gif" alt="loading" title="Loading" width="60" height="60">
+          <div class="loading-count" style="color: black">Sending...</div>
+        </div>
+      </div>
+    </div>
+
     <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendMsg()">
 
       <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
