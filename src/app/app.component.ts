@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {interval, Subscription} from "rxjs";
 import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
+import {OfferService} from "./service/offer.service";
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,12 @@ export class AppComponent implements OnInit {
 
   title = 'Flexiart Company';
 
+  offerEndDay:any;
+  offerImage:any;
+
   private subscription: Subscription | undefined;
   public dateNow = new Date();
-  public dDay = new Date('august 01 2023 00:00:00');
+  public dDay:any;
   milliSecondsInASecond = 1000;
   hoursInADay = 24;
   minutesInAnHour = 60;
@@ -30,27 +34,7 @@ export class AppComponent implements OnInit {
 
   consoleLogEmpty: boolean = false;
 
-  private getTimeDifference() {
-    this.timeDifference = this.dDay.getTime() - new Date().getTime();
-
-    if (this.dDay > new Date()) {
-      this.allocateTimeUnits(this.timeDifference);
-    }
-    else {
-      document.getElementsByClassName('timer')[0].innerHTML = "Offer Ended!";
-      document.getElementsByClassName('modal-btn')[0].innerHTML = "Request an Offer";
-    }
-    // this.allocateTimeUnits(this.timeDifference);
-  }
-
-  private allocateTimeUnits(timeDifference: any) {
-    this.secondsToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond) % this.SecondsInAMinute);
-    this.minutesToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour) % this.SecondsInAMinute);
-    this.hoursToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute) % this.hoursInADay);
-    this.daysToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay));
-  }
-
-  constructor(private meta: Meta, private router: Router) {
+  constructor(private meta: Meta, private router: Router, private offerService: OfferService) {
   }
 
   ngOnInit(): void {
@@ -73,6 +57,8 @@ export class AppComponent implements OnInit {
         '        best software development company, app development company, node development, mean stack, mern stack, flexible apps,\n' +
         '        flexiart, digital flexi, web app developer, mobile app developer, flexi-art'
     });
+
+    this.loadOffers();
 
     this.buttonClick()
 
@@ -112,6 +98,38 @@ export class AppComponent implements OnInit {
       }
     }, delayInMilliseconds);
 
+  }
+
+  loadOffers() {
+    this.offerService.getOffers().subscribe(data => {
+      if (data.data.value !== null) {
+        this.offerImage = data.data.value[0].img;
+        this.offerEndDay = data.data.value[0].date;
+        this.dDay = new Date(this.offerEndDay);
+      }
+    }, error => {
+      console.log(error)
+    });
+  }
+
+  private getTimeDifference() {
+    this.timeDifference = this.dDay.getTime() - new Date().getTime();
+
+    if (this.dDay > new Date()) {
+      this.allocateTimeUnits(this.timeDifference);
+    }
+    else {
+      document.getElementsByClassName('timer')[0].innerHTML = "Offer Ended!";
+      document.getElementsByClassName('modal-btn')[0].innerHTML = "Request an Offer";
+    }
+    // this.allocateTimeUnits(this.timeDifference);
+  }
+
+  private allocateTimeUnits(timeDifference: any) {
+    this.secondsToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond) % this.SecondsInAMinute);
+    this.minutesToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour) % this.SecondsInAMinute);
+    this.hoursToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute) % this.hoursInADay);
+    this.daysToDday = Math.floor((timeDifference) / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay));
   }
 
   isActive(route: string): boolean {

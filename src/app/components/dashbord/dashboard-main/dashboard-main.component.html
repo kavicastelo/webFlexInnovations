@@ -1,4 +1,7 @@
 <div class="container">
+
+  <h1 style="margin: 30px 0; font-weight: 500; color: #636e72">Change Project Count</h1>
+
   <form [formGroup]="pCountForm">
     <div class="row">
       <div class="col-12 col-lg-4 col-md-4 col-sm-12">
@@ -19,6 +22,31 @@
       <div class="row col-12">
         <p style="text-align: left; margin: 0; padding: 0">
           <button (click)="saveCount()" [disabled]="pCountForm.invalid" mat-raised-button color="primary">{{enableCount?'Update Count':'Save Count'}}</button>
+          &nbsp;<button type="reset" mat-raised-button style="background-color: #7f8c8d">Reset</button>
+        </p>
+      </div>
+    </div>
+  </form>
+
+  <h1 style="margin: 30px 0; font-weight: 500; color: #636e72">Change Offers</h1>
+
+  <form [formGroup]="offersForm">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <mat-form-field class="input-wrapper" appearance="outline">
+          <input formControlName="img" matInput type="text" placeholder="Image path">
+        </mat-form-field>
+        <span>Use only WEBP images</span>
+      </div>
+      <div class="col-12 col-md-6">
+        <mat-form-field class="input-wrapper" appearance="outline">
+          <input formControlName="date" matInput type="text" placeholder="August 05, 2023">
+        </mat-form-field>
+        <span>Don't change the input format</span>
+      </div>
+      <div class="row col-12">
+        <p style="text-align: left; margin: 0; padding: 0">
+          <button  [disabled]="offersForm.invalid" mat-raised-button color="primary">Update</button>
           &nbsp;<button type="reset" mat-raised-button style="background-color: #7f8c8d">Reset</button>
         </p>
       </div>

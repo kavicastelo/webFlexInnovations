@@ -22,4 +22,13 @@ export class AuthService {
     return user.length !== 0; //user.length === 0?false:true
   }
 
+  public userEmail(){
+    this.cookieService.get('user_email');
+  }
+
+  public userEmailIsExists():boolean{
+    let user = this.cookieService.get('user_email');
+    return user.length !== 0;
+  }
+
 }

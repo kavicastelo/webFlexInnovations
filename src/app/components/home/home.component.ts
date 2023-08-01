@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProjectCountService} from "../../service/project-count.service";
 import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
+import {AuthService} from "../../service/auth.service";
 
 @Component({
   selector: 'app-home',
@@ -53,7 +54,11 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  constructor(private pCountService: ProjectCountService, private meta: Meta, private router: Router) {
+  constructor(
+    private pCountService: ProjectCountService,
+    private cookieService: AuthService,
+    private meta: Meta,
+    private router: Router) {
   }
 
   ngOnInit(): void {
