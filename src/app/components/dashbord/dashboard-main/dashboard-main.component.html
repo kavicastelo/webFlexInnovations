@@ -46,7 +46,7 @@
       </div>
       <div class="row col-12">
         <p style="text-align: left; margin: 0; padding: 0">
-          <button  [disabled]="offersForm.invalid" mat-raised-button color="primary">Update</button>
+          <button (click)="updateOffers()" [disabled]="offersForm.invalid" mat-raised-button color="primary">Update</button>
           &nbsp;<button type="reset" mat-raised-button style="background-color: #7f8c8d">Reset</button>
         </p>
       </div>

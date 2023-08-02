@@ -14,6 +14,7 @@ import {OfferService} from "../../../service/offer.service";
 export class DashboardMainComponent {
   selectedCount:any = [];
   enableCount = false;
+  offerID:any;
 
   pCountForm = new FormGroup({
     clients: new FormControl(null,[
@@ -92,6 +93,7 @@ export class DashboardMainComponent {
 
   loadOffers(){
     this.offersService.getOffers().subscribe(response=>{
+      this.offerID = response.data.value[0].id;
       let patch = {
         img:response.data.value[0].img,
         date:response.data.value[0].date
@@ -106,7 +108,7 @@ export class DashboardMainComponent {
     this.offersService.updateOffer({
       img:this.offersForm.get('img')?.value,
       date:this.offersForm.get('date')?.value
-    },'1001').subscribe(response=>{
+    },this.offerID).subscribe(response=>{
       this.openSnackBar('Offers Updated!','OK');
       this.loadOffers();
     },error => {

@@ -3,6 +3,8 @@ import {ProjectCountService} from "../../service/project-count.service";
 import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
 import {AuthService} from "../../service/auth.service";
+import {SubscribeService} from "../../service/subscribe.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,9 @@ import {AuthService} from "../../service/auth.service";
 export class HomeComponent implements OnInit {
   pCount: any[] = []
   loadingCount = true;
+
+  showError:boolean = false;
+  checkMail:any;
 
   hovered = false;
 
@@ -56,8 +61,10 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private pCountService: ProjectCountService,
+    private sService: SubscribeService,
     private cookieService: AuthService,
     private meta: Meta,
+    private snackBar:MatSnackBar,
     private router: Router) {
   }
 
@@ -77,9 +84,7 @@ export class HomeComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'keywords',
-      content: 'web development, mobile development, software development, web application, mobile apps, software company,\n' +
-        '        best software development company, app development company, node development, mean stack, mern stack, flexible apps,\n' +
-        '        flexiart, digital flexi, web app developer, mobile app developer, flexi-art'
+      content: 'web development, mobile development, software development, web application, mobile apps, software company, best software development company, app development company, node development, mean stack, mern stack, flexible apps, flexiart, digital flexi, web app developer, mobile app developer, flexi-art, flexiart company, flexiart software company, Software development company, Web development services, Mobile app development solutions, Social media marketing strategies,Data entry services, Typesetting solutions, Graphic design services, IT problem-solving expertise, Custom software development, E-commerce website development, Responsive web design, Mobile application optimization, Social media advertising campaigns, Data management and cleansing, Print and digital typesetting, Logo design and branding, IT consulting and solutions, User interface (UI) and user experience (UX) design, Cloud computing solutions, Cybersecurity and data protection measures, sri lanka'
     });
 
     this.loadPCount()
@@ -98,6 +103,46 @@ export class HomeComponent implements OnInit {
   getRotation(index: number): number {
     const deg = this.options.length === 8 ? 45 : 360;
     return this.selectedOptions.includes(index + 1) ? index * deg : -360;
+  }
+
+  newsLetter() {
+    let input = document.querySelector('#subInput');
+    let val = (<HTMLInputElement>document.getElementById('subInput')).value
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (val.match(validRegex)) {
+      this.showError = false;
+      this.sService.getNews().subscribe(response => {
+        let isSubscribed = false;
+
+        for (let i = 0; i < response.data.value.length; i++) {
+          this.checkMail = response.data.value[i];
+
+          if (this.checkMail.email === val && this.checkMail.subscribed) {
+            isSubscribed = true;
+            break;
+          }
+        }
+
+        if (isSubscribed) {
+          (<HTMLInputElement>document.getElementById('subInput')).value = '';
+          this.openSnackBar('You are already subscribed', 'OK');
+        } else {
+          this.sService.subscribeNews(val).subscribe(
+            response => {
+              (<HTMLInputElement>document.getElementById('subInput')).value
+              this.openSnackBar('Subscribe Success!', 'OK');
+            },
+            error => {
+              (<HTMLInputElement>document.getElementById('subInput')).value
+              this.openSnackBar('Subscribe Failed! try again!', 'OK');
+            }
+          );
+        }
+      });
+    } else {
+      this.showError = true;
+    }
   }
 
   toggleOptions(): void {
@@ -143,5 +188,9 @@ export class HomeComponent implements OnInit {
   toggleHoverStyles(hovering: boolean): void {
     this.hovered = hovering;
     console.log(hovering);
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action,{duration:2000});
   }
 }

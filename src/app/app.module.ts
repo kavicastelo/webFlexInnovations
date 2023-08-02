@@ -64,6 +64,9 @@ import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery
 import {NgOptimizedImage} from "@angular/common";
 import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
 import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-step-authorize.component";
+import {
+  EmailTemplateEditorComponent
+} from "./components/dashbord/email-template-editor/email-template-editor.component";
 
 @NgModule({
   declarations: [
@@ -113,7 +116,8 @@ import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-ste
     GalleryComponent,
     DashboardGalleryComponent,
     DashboardVerifyComponent,
-    TwoStepAuthorizeComponent
+    TwoStepAuthorizeComponent,
+    EmailTemplateEditorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

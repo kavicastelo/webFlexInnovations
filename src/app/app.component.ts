@@ -53,14 +53,14 @@ export class AppComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'keywords',
-      content: 'web development, mobile development, software development, web application, mobile apps, software company,\n' +
-        '        best software development company, app development company, node development, mean stack, mern stack, flexible apps,\n' +
-        '        flexiart, digital flexi, web app developer, mobile app developer, flexi-art'
+      content: 'web development, mobile development, software development, web application, mobile apps, software company, best software development company, app development company, node development, mean stack, mern stack, flexible apps, flexiart, digital flexi, web app developer, mobile app developer, flexi-art, flexiart company, flexiart software company, Software development company, Web development services, Mobile app development solutions, Social media marketing strategies,Data entry services, Typesetting solutions, Graphic design services, IT problem-solving expertise, Custom software development, E-commerce website development, Responsive web design, Mobile application optimization, Social media advertising campaigns, Data management and cleansing, Print and digital typesetting, Logo design and branding, IT consulting and solutions, User interface (UI) and user experience (UX) design, Cloud computing solutions, Cybersecurity and data protection measures, sri lanka'
     });
 
     this.loadOffers();
 
-    this.buttonClick()
+    setTimeout(()=>{
+      this.buttonClick()
+    },32000)
 
     this.subscription = interval(1000)
       .subscribe(x => {

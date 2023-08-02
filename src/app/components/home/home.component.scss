@@ -260,3 +260,47 @@ $speed: 1s;
     }
   }
 }
+
+#news-letter{
+  .dec-1,.dec-2,.dec-3,.dec-4{
+    position: absolute;
+    //background-color: #13E8E9;
+    background-image: url("../../../assets/img/asset/dec.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dec-1{
+    top: 20px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    animation: loading-effect 4s infinite;
+    animation-delay: 1s;
+  }
+  .dec-2{
+    top: 20px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    animation: loading-effect 3s infinite;
+    animation-delay: 2s;
+  }
+  .dec-3{
+    top: 80px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    animation: loading-effect 2s infinite;
+    animation-delay: 3s;
+  }
+  .dec-4{
+    top: 40px;
+    right: 120px;
+    width: 200px;
+    height: 200px;
+    animation: loading-effect 1s infinite;
+    animation-delay: 4s;
+  }
+}

@@ -107,7 +107,7 @@ export class DashboardSettingComponent {
         this.selectedUserId = this.selectedUser._id
       }
       else{
-        this.openSnackBar('Customer not Found!','OK');
+        this.openSnackBar('User not Found!','OK');
       }
     },error=>{
       this.openSnackBar('Somethings Wrong! try again','OK');

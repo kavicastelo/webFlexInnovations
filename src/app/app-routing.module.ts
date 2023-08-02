@@ -44,6 +44,9 @@ import {GalleryComponent} from "./components/gallery/gallery.component";
 import {DashboardGalleryComponent} from "./components/dashbord/dashboard-gallery/dashboard-gallery.component";
 import {DashboardVerifyComponent} from "./components/dashbord/dashboard-verify/dashboard-verify.component";
 import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-step-authorize.component";
+import {
+  EmailTemplateEditorComponent
+} from "./components/dashbord/email-template-editor/email-template-editor.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -72,6 +75,7 @@ const routes: Routes = [
       {path: "feedbacks", component: DashboardFeedbacksComponent},
       {path: "gallery", component: DashboardGalleryComponent},
       {path: "verify", component: DashboardVerifyComponent},
+      {path: "edit-template", component: EmailTemplateEditorComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},
