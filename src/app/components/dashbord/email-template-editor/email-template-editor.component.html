@@ -1,1 +1,7 @@
-<p>email working</p>
+<div class="button">
+  <button (click)="convertHtmlToPage()" [ngStyle]="{'background-color':view?'red':'#1b85c9'}">{{view?'Code':'View'}}</button>
+</div>
+
+<textarea [(ngModel)]="htmlContent" placeholder="Enter your HTML code here" class="input-area" [ngStyle]="{'display':view?'none':'block'}"></textarea>
+<div class="page-view" [innerHTML]="renderedHtml" [ngStyle]="{'display':view?'block':'none'}"></div>
+

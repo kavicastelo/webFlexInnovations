@@ -25,7 +25,8 @@
           "options": {
             "allowedCommonJsDependencies": [
               "lodash",
-              "file-saver"
+              "file-saver",
+              "dompurify"
             ],
             "outputPath": "dist/myCompanyFront/browser",
             "index": "src/index.html",

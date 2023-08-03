@@ -1,0 +1,17 @@
+.input-area, .page-view{
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+}
+
+.page-view{
+  overflow: auto;
+}
+
+.button{
+  button{
+    border: none;
+    color: white;
+    padding: 15px 30px;
+  }
+}
