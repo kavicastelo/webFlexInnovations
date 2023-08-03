@@ -16,4 +16,8 @@ export class SendEmailsService {
     return this.http.post(this.baseUrl+'sendMail/template', template);
   }
 
+  sendDemos(template: any): Observable<any> {
+    return this.http.post(this.baseUrl+'sendMail/demos', template);
+  }
+
 }

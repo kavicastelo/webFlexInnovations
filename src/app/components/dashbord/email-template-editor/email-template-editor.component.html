@@ -3,15 +3,16 @@
   <input type="text" [(ngModel)]="subject">
 </div>
 
-<div class="button">
+<div class="button d-flex align-items-center">
   <button (click)="convertHtmlToPage()" [ngStyle]="{'background-color':view?'red':'#1b85c9'}">{{view?'Code':'View'}}</button>
+  &nbsp;&nbsp;&nbsp;<span style="color: red" [ngStyle]="{'display':view?'none':'block'}">Mails can be send only view mode (Click the View button)</span>
 </div>
 
 <textarea [(ngModel)]="htmlContent" placeholder="Enter your HTML code here" class="input-area" [ngStyle]="{'display':view?'none':'block'}"></textarea>
 <div class="page-view" [innerHTML]="renderedHtml" [ngStyle]="{'display':view?'block':'none'}"></div>
 
 <div class="d-flex align-items-center justify-content-center button" style="margin-top: 20px">
-  <button style="background-color: #1b85c9">Send to Demos</button>
-  <button style="background-color: #e74c3c">Send to Subscribers</button>
+  <button style="background-color: #1b85c9" (click)="demoSubmit()" [disabled]="!view">Send to Demos</button>
+  <button style="background-color: #e74c3c" (click)="onSubmit()" [disabled]="!view">Send to Subscribers</button>
 </div>
 
