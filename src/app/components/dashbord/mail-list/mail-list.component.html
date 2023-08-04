@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12 col-md-6">
+    <button routerLink="/dashboard/edit-template">SEND MAIL</button>
+    <button (click)="exportToExcel()">EXPORT {{allList?'ALL MAILS':'SUBSCRIBERS'}}</button>
+    <button (click)="load()">{{!allList?'LOAD ALL MAILS':'LOAD SUBSCRIBERS'}}</button>
+  </div>
+  <div class="col-12 col-md-6">
+    <table class="table table-hover">
+      <tr>
+        <th>{{allList?'All Mails (Unsubscribes included)':'Subscribers List(Unsubscribes not included)'}}</th>
+      </tr>
+      <tr *ngFor="let m of mailsList">
+        <td>{{m.email}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
