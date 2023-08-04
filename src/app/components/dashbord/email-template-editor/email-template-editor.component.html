@@ -3,6 +3,16 @@
   <input type="text" [(ngModel)]="subject">
 </div>
 
+<div *ngIf="loading" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+  <div class="d-flex align-items-center justify-content-center w-100 h-100">
+    <div class="d-flex flex-column align-items-center justify-content-center"
+         style="width: 80%; padding: 30px; border: 1px solid #13E8E9; border-radius: 25px; background-color: rgba(0,0,0,.5)">
+      <img src="./assets/img/asset/small_loading.gif" alt="loading" title="Loading" width="60" height="60">
+      <div class="loading-count">Sending...</div>
+    </div>
+  </div>
+</div>
+
 <div class="button d-flex align-items-center">
   <button (click)="convertHtmlToPage()" [ngStyle]="{'background-color':view?'red':'#1b85c9'}">{{view?'Code':'View'}}</button>
   &nbsp;&nbsp;&nbsp;<span style="color: red" [ngStyle]="{'display':view?'none':'block'}">Mails can be send only view mode (Click the View button)</span>

@@ -15,6 +15,7 @@ export class EmailTemplateEditorComponent {
   renderedHtml: SafeHtml = '';
   subject: string = '';
   view: boolean = false;
+  loading:boolean = false;
 
   template: any = {
     subject: '',
@@ -30,6 +31,7 @@ export class EmailTemplateEditorComponent {
   }
 
   onSubmit() {
+    this.loading = true;
     // Sanitize the HTML content before sending
     const sanitizedHtmlContent = DOMPurify.sanitize(this.htmlContent);
     this.template.htmlContent = sanitizedHtmlContent;
@@ -37,24 +39,29 @@ export class EmailTemplateEditorComponent {
 
     this.eService.sendTemplate(this.template).subscribe(
       (response) => {
+        this.loading = false;
         this.openSnackBar('Template sent successfully','OK');
       },
       (error) => {
+        this.loading = false;
         this.openSnackBar('Error sending template','OK');
       }
     );
   }
 
   demoSubmit() {
+    this.loading = true;
     const sanitizedHtmlContent = DOMPurify.sanitize(this.htmlContent);
     this.template.htmlContent = sanitizedHtmlContent;
     this.template.subject = this.subject;
 
     this.eService.sendDemos(this.template).subscribe(
       (response) => {
+        this.loading = false;
         this.openSnackBar('Template sent successfully','OK');
       },
       (error) => {
+        this.loading = false;
         this.openSnackBar('Error sending template','OK');
       }
     );
