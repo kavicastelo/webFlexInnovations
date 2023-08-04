@@ -67,6 +67,8 @@ import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-ste
 import {
   EmailTemplateEditorComponent
 } from "./components/dashbord/email-template-editor/email-template-editor.component";
+import {UnsubscribeComponent} from "./components/unsubscribe/unsubscribe.component";
+import {MailListComponent} from "./components/dashbord/mail-list/mail-list.component";
 
 @NgModule({
   declarations: [
@@ -117,7 +119,9 @@ import {
     DashboardGalleryComponent,
     DashboardVerifyComponent,
     TwoStepAuthorizeComponent,
-    EmailTemplateEditorComponent
+    EmailTemplateEditorComponent,
+    UnsubscribeComponent,
+    MailListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

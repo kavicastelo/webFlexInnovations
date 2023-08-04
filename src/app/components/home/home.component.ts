@@ -130,11 +130,11 @@ export class HomeComponent implements OnInit {
         } else {
           this.sService.subscribeNews(val).subscribe(
             response => {
-              (<HTMLInputElement>document.getElementById('subInput')).value
+              (<HTMLInputElement>document.getElementById('subInput')).value = '';
               this.openSnackBar('Subscribe Success!', 'OK');
             },
             error => {
-              (<HTMLInputElement>document.getElementById('subInput')).value
+              (<HTMLInputElement>document.getElementById('subInput')).value = '';
               this.openSnackBar('Subscribe Failed! try again!', 'OK');
             }
           );

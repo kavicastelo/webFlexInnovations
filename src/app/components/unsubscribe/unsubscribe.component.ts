@@ -1,30 +1,30 @@
-import { Component } from '@angular/core';
-import {ProjectCountService} from "../../../service/project-count.service";
-import {SubscribeService} from "../../../service/subscribe.service";
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
+import {SubscribeService} from "../../service/subscribe.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-unsubscribe',
+  templateUrl: './unsubscribe.component.html',
+  styleUrls: ['./unsubscribe.component.scss']
 })
-export class BlogComponent {
+export class UnsubscribeComponent {
 
   showError:boolean = false;
   checkMail:any;
 
-  constructor(
-    private pCountService: ProjectCountService,
-    private snackBar: MatSnackBar,
-    private sService: SubscribeService) {
+  constructor(private route:Router, private sService:SubscribeService, private snackBar: MatSnackBar) {
   }
 
-  newsLetter() {
-    let input = document.querySelector('#subInput');
-    let val = (<HTMLInputElement>document.getElementById('subInput')).value
+  closeWindow() {
+    this.route.navigate(['/']);
+  }
+
+  unsubscribe() {
+    let mail = (<HTMLInputElement>document.getElementById('subInput')).value
     const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if (val.match(validRegex)) {
+    if (mail.match(validRegex)) {
       this.showError = false;
       this.sService.getNews().subscribe(response => {
         let isSubscribed = false;
@@ -32,7 +32,7 @@ export class BlogComponent {
         for (let i = 0; i < response.data.value.length; i++) {
           this.checkMail = response.data.value[i];
 
-          if (this.checkMail.email === val && this.checkMail.subscribed) {
+          if (this.checkMail.email === mail && !this.checkMail.subscribed) {
             isSubscribed = true;
             break;
           }
@@ -40,16 +40,18 @@ export class BlogComponent {
 
         if (isSubscribed) {
           (<HTMLInputElement>document.getElementById('subInput')).value = '';
-          this.openSnackBar('You are already subscribed', 'OK');
+          this.openSnackBar('You are already unsubscribed', 'OK');
         } else {
-          this.sService.subscribeNews(val).subscribe(
+          this.sService.unsubscribeNews(mail).subscribe(
             response => {
               (<HTMLInputElement>document.getElementById('subInput')).value = '';
-              this.openSnackBar('Subscribe Success!', 'OK');
+              this.openSnackBar('Unsubscribe Success!', 'OK');
+              this.route.navigate(['/']);
             },
             error => {
               (<HTMLInputElement>document.getElementById('subInput')).value = '';
-              this.openSnackBar('Subscribe Failed! try again!', 'OK');
+              this.openSnackBar('Unsubscribe Failed! try again!', 'OK');
+              this.route.navigate(['/']);
             }
           );
         }
@@ -62,4 +64,5 @@ export class BlogComponent {
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action,{duration:2000});
   }
+
 }

@@ -358,6 +358,15 @@ body { margin: 0;
   animation: loading-effect 2s infinite;
 }
 
+@keyframes danger-effect {
+  from{
+    background-image: linear-gradient(transparentize(red, .9), red, transparentize(red, .9));
+  }
+  to{
+    background-image: none;
+  }
+}
+
 //scrollbar vertical
 ::-webkit-scrollbar {
   width: 0;

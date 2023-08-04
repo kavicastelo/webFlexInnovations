@@ -22,4 +22,10 @@ export class SubscribeService {
       subscribed: true
     });
   }
+
+  public unsubscribeNews(email: any): Observable<any> {
+    return this.http.put(this.baseUrl + "subscribe/update", {
+      subscribed:false
+    },{headers:{email:email}});
+  }
 }

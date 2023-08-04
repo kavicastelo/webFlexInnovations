@@ -47,6 +47,8 @@ import {TwoStepAuthorizeComponent} from "./components/two-step-authorize/two-ste
 import {
   EmailTemplateEditorComponent
 } from "./components/dashbord/email-template-editor/email-template-editor.component";
+import {UnsubscribeComponent} from "./components/unsubscribe/unsubscribe.component";
+import {MailListComponent} from "./components/dashbord/mail-list/mail-list.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -76,6 +78,7 @@ const routes: Routes = [
       {path: "gallery", component: DashboardGalleryComponent},
       {path: "verify", component: DashboardVerifyComponent},
       {path: "edit-template", component: EmailTemplateEditorComponent},
+      {path: "mail-list", component: MailListComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},
@@ -100,6 +103,7 @@ const routes: Routes = [
   {path:"pricing", component:PricesComponent},
   {path:"gallery", component:GalleryComponent},
   {path:"authorize", component:TwoStepAuthorizeComponent},
+  {path:"unsubscribe", component:UnsubscribeComponent},
   {path:"**", component:NotFoundComponent},
 ];
 

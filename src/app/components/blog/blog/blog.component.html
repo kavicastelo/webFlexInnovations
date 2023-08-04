@@ -10,8 +10,6 @@
 
 <div class="container">
 
-  <router-outlet></router-outlet>
-
   <div class="row">
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="card" style="width: 100%; margin: 3vw 0">
@@ -57,4 +55,24 @@
     </div>
 
   </div>
+  <router-outlet></router-outlet>
+
 </div>
+
+<section id="news-letter" style="background-color: black">
+  <div class="container" style="padding-top: 30px; padding-bottom: 30px; position: relative">
+    <div class="dec-1"></div>
+    <div class="dec-2"></div>
+    <div class="dec-3"></div>
+    <div class="dec-4"></div>
+    <div class="title-1">News Letter</div>
+    <div class="p-1">Subscribe our news letter to get our latest offers & updates!!</div>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="d-sm-flex align-items-center justify-content-center">
+        <input id="subInput" type="email" style="margin: 10px; height: 50px; width: 100%; padding:0 15px;" placeholder="example@gmail.com">
+        <button class="button-1" style="margin:10px" (click)="newsLetter()">SUBSCRIBE</button>
+      </div>
+    </div>
+    <div [ngStyle]="{'display':showError?'block':'none'}" style="color: red">Enter a valid email address</div>
+  </div>
+</section>
