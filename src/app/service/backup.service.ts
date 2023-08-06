@@ -24,4 +24,8 @@ export class BackupService {
     link.download = 'Flexiart_DB.zip'; // Specify the downloaded file name
     link.click();
   }
+
+  public restoreBackup(formData:any): Observable<any> {
+    return this.http.post(this.baseUrl + "backup/restore", formData);
+  }
 }
