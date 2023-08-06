@@ -69,6 +69,7 @@ import {
 } from "./components/dashbord/email-template-editor/email-template-editor.component";
 import {UnsubscribeComponent} from "./components/unsubscribe/unsubscribe.component";
 import {MailListComponent} from "./components/dashbord/mail-list/mail-list.component";
+import {BackupComponent} from "./components/dashbord/backup/backup.component";
 
 @NgModule({
   declarations: [
@@ -121,7 +122,8 @@ import {MailListComponent} from "./components/dashbord/mail-list/mail-list.compo
     TwoStepAuthorizeComponent,
     EmailTemplateEditorComponent,
     UnsubscribeComponent,
-    MailListComponent
+    MailListComponent,
+    BackupComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

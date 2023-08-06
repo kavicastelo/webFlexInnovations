@@ -49,6 +49,7 @@ import {
 } from "./components/dashbord/email-template-editor/email-template-editor.component";
 import {UnsubscribeComponent} from "./components/unsubscribe/unsubscribe.component";
 import {MailListComponent} from "./components/dashbord/mail-list/mail-list.component";
+import {BackupComponent} from "./components/dashbord/backup/backup.component";
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -79,6 +80,7 @@ const routes: Routes = [
       {path: "verify", component: DashboardVerifyComponent},
       {path: "edit-template", component: EmailTemplateEditorComponent},
       {path: "mail-list", component: MailListComponent},
+      {path: "backup", component: BackupComponent},
     ]},
   {path:"login", component:LoginComponent},
   {path:"admin-login", component:AdminLoginComponent},
