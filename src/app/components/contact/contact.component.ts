@@ -17,6 +17,8 @@ export class ContactComponent implements OnInit {
 
   loading:boolean = false;
 
+  mailto:boolean = false;
+
   starForm = new FormGroup({
     rating: new FormControl(null,[
       Validators.required
@@ -63,11 +65,13 @@ export class ContactComponent implements OnInit {
     ).subscribe(response=>{
       this.loading = false;
       this.openSnackBar('Send Success!','OK')
+      this.mailto = false;
       this.contactForm.reset();
       this.route.navigateByUrl("/checkout")
     },error => {
       this.loading = false;
-      this.openSnackBar('Send Failed! try again!','OK')
+      this.openSnackBar('Send Failed! try again!','OK');
+      this.mailto = true;
       // console.log(error);
     })
   }
