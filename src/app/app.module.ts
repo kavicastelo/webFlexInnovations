@@ -24,7 +24,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {DashbordComponent} from './components/dashbord/dashbord.component';
 import {LoginComponent} from './components/login/login.component';
@@ -70,6 +70,7 @@ import {
 import {UnsubscribeComponent} from "./components/unsubscribe/unsubscribe.component";
 import {MailListComponent} from "./components/dashbord/mail-list/mail-list.component";
 import {BackupComponent} from "./components/dashbord/backup/backup.component";
+import {NetworkErrorInterceptor} from "./service/GlobalErrorHandler.service";
 
 @NgModule({
   declarations: [
@@ -145,7 +146,9 @@ import {BackupComponent} from "./components/dashbord/backup/backup.component";
     LightboxModule,
     NgOptimizedImage
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NetworkErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

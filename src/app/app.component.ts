@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ErrorHandler, OnInit} from '@angular/core';
 import {interval, Subscription} from "rxjs";
 import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
@@ -65,6 +65,8 @@ export class AppComponent implements OnInit {
     this.subscription = interval(1000)
       .subscribe(x => {
         this.getTimeDifference();
+      }, error => {
+        // console.log('serverside error');
       });
 
     this.isDropdownActive = false;
@@ -107,13 +109,23 @@ export class AppComponent implements OnInit {
         this.offerEndDay = data.data.value[0].date;
         this.dDay = new Date(this.offerEndDay);
       }
+      else{
+        console.log('error')
+      }
     }, error => {
-      console.log(error)
+      // console.log('server side error');
+      this.offerImage = './assets/img/modal-1.webp';
+      this.dDay = new Date('August 10, 2023');
     });
   }
 
   private getTimeDifference() {
-    this.timeDifference = this.dDay.getTime() - new Date().getTime();
+    try {
+      this.timeDifference = this.dDay.getTime() - new Date().getTime();
+    }
+    catch (e) {
+      this.timeDifference = 0;
+    }
 
     if (this.dDay > new Date()) {
       this.allocateTimeUnits(this.timeDifference);

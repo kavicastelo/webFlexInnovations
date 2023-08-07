@@ -68,7 +68,7 @@ export class ContactComponent implements OnInit {
     },error => {
       this.loading = false;
       this.openSnackBar('Send Failed! try again!','OK')
-      console.log(error);
+      // console.log(error);
     })
   }
 

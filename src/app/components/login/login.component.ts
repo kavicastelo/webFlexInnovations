@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit{
     },error => {
       this.loading = false;
       this.openSnackBar('Logging Failed! try again!','OK')
-      console.log(error);
+      // console.log(error);
     })
   }
 

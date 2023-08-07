@@ -95,7 +95,8 @@ export class HomeComponent implements OnInit {
       this.pCount = response.data.value;
       this.loadingCount = false;
     }, error => {
-      console.log(error);
+      // console.log(error);
+      // console.log('serverside error');
       this.loadingCount = true;
     })
   }

@@ -53,7 +53,7 @@ export class FeedbacksComponent {
     },error => {
       this.loading = false;
       this.openSnackBar('Send Failed! try again!','OK')
-      console.log(error);
+      // console.log(error);
     })
   }
 
@@ -61,7 +61,7 @@ export class FeedbacksComponent {
     this.feedbackService.feedbacksList().subscribe(response=>{
       this.feedbackList = response.data.value;
     },error => {
-      console.log(error);
+      // console.log(error);
     })
   }
 

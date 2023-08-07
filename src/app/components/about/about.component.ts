@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit {
       this.pCount = response.data.value;
       this.loadingCount = false;
     },error => {
-      console.log(error);
+      // console.log(error);
       this.loadingCount = true;
     })
   }

@@ -46,7 +46,7 @@ export class GalleryComponent implements OnInit{
       this.images = response.data.value;
       this.loadingImages = false;
     },error => {
-      console.log(error);
+      // console.log(error);
       this.loadingImages = true;
     })
   }

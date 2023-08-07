@@ -47,9 +47,12 @@ export class BackupComponent {
     const formData = new FormData();
     formData.append('backup', this.selectedFile);
 
+    this.loading = true;
     this.backupService.restoreBackup(formData).subscribe(() => {
+      this.loading = false;
       this.snackBar.open('Database restored','OK');
     }, error => {
+      this.loading = false;
       this.snackBar.open('Error restoring database. try again!','OK');
     });
   }
