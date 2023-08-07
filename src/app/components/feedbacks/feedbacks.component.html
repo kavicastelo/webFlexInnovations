@@ -20,7 +20,9 @@
         <tr>
           <div class="d-flex align-items-center" style="height: 40px; padding: 0; margin: 0;"><img
             src="https://thenounproject.com/api/private/icons/2011989/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0"
-            alt="dp" style="height: 100%" title="Anonymous"><span class="sub-heading-1" style="color: black">Anonymous</span></div> <br>
+            alt="dp" style="height: 100%" title="Anonymous"><span class="sub-heading-1"
+                                                                  style="color: black">Joan Butler</span></div>
+          <br>
           I strongly recommend this company to get created your projects on time.. The staff is so customer friendly.
           They
           created a superb website for my online classes, it is easy to use and it worths the amount i paid to their
@@ -29,61 +31,67 @@
         <tr>
           <div class="d-flex align-items-center" style="height: 40px; padding: 0; margin: 0;"><img
             src="https://thenounproject.com/api/private/icons/2011989/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0"
-            alt="dp" style="height: 100%" title="M A T Pramuditha"><span class="sub-heading-1" style="color: black">M A T Pramuditha</span></div> <br>
+            alt="dp" style="height: 100%" title="M A T Pramuditha"><span class="sub-heading-1" style="color: black">M A T Pramuditha</span>
+          </div>
+          <br>
           I'm so glad to find flexiart company to solve my bussiness problem. They completed the task with a minimum
           time duration, maintaining the quality of it.
         </tr>
         <tr *ngFor="let f of feedbackList">
           <div class="d-flex align-items-center" style="height: 40px; padding: 0; margin: 0;"><img
             src="https://thenounproject.com/api/private/icons/2011989/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0"
-            alt="dp" style="height: 100%" title="{{f.fullName}}"><span class="sub-heading-1" style="color: black">{{f.fullName}}</span></div> <br>
+            alt="dp" style="height: 100%" title="{{f.fullName}}"><span class="sub-heading-1"
+                                                                       style="color: black">{{f.fullName}}</span></div>
+          <br>
           {{f.msg}}
         </tr>
         </tbody>
       </table>
 
-      <div class="sub-heading-1" style="margin-top: 30px">
-        SEND US YOUR FEEDBACK
-      </div>
+      <div style="position: relative">
+        <div class="sub-heading-1" style="margin-top: 30px">
+          SEND US YOUR FEEDBACK
+        </div>
 
-      <div *ngIf="loading" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
-        <div class="d-flex align-items-center justify-content-center w-100 h-100">
-          <div class="d-flex flex-column align-items-center justify-content-center"
-               style="width: 80%; padding: 30px; border: 1px solid #13E8E9; border-radius: 25px; background-color: rgba(255,255,255,.5)">
-            <img src="./assets/img/asset/small_loading.gif" alt="loading" title="Loading" width="60" height="60">
-            <div class="loading-count" style="color: black">Verifying...</div>
+        <div *ngIf="loading" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+          <div class="d-flex align-items-center justify-content-center w-100 h-100">
+            <div class="d-flex flex-column align-items-center justify-content-center"
+                 style="width: 80%; padding: 30px; border: 1px solid #13E8E9; border-radius: 25px; background-color: rgba(255,255,255,.5)">
+              <img src="./assets/img/asset/small_loading.gif" alt="loading" title="Loading" width="60" height="60">
+              <div class="loading-count" style="color: black">Verifying...</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
+        <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
 
-        <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
-          <mat-label>Name</mat-label>
-          <input matInput formControlName="name" placeholder="Ex. kavindu kokila">
-        </mat-form-field>
-
-        <div class="d-flex" style="width: 100%">
           <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
-            <mat-label>Message</mat-label>
-            <textarea matInput formControlName="message" placeholder="Ex. Feedback" autocomplete="on"></textarea>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Ex. kavindu kokila">
           </mat-form-field>
-        </div>
 
-<!--        <p class="contact-form-full-width" id="voice-para" style="color: white">{{voiceService.text}}-->
-<!--        </p>-->
+          <div class="d-flex" style="width: 100%">
+            <mat-form-field class="contact-form-full-width" appearance="outline" color="accent">
+              <mat-label>Message</mat-label>
+              <textarea matInput formControlName="message" placeholder="Ex. Feedback" autocomplete="on"></textarea>
+            </mat-form-field>
+          </div>
 
-        <button class="button-3">Submit</button>
-      </form>
-<!--      <div class="d-flex">-->
-<!--        <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}"-->
-<!--                (click)="recordBtn()">-->
-<!--          <mat-icon>mic</mat-icon>-->
-<!--        </button>-->
-<!--        <button (click)="patchValue()" style="background-color: transparent; border: none; color: white">-->
-<!--          <mat-icon>done</mat-icon>-->
-<!--        </button>-->
-<!--      </div>-->
+          <!--        <p class="contact-form-full-width" id="voice-para" style="color: white">{{voiceService.text}}-->
+          <!--        </p>-->
+
+          <button class="button-3">Submit</button>
+        </form>
+      </div>
+      <!--      <div class="d-flex">-->
+      <!--        <button class="button-4" style="margin-top: 5px" [ngStyle]="{'background-color':voiceBtn?'#aaa':'#13E8E9'}"-->
+      <!--                (click)="recordBtn()">-->
+      <!--          <mat-icon>mic</mat-icon>-->
+      <!--        </button>-->
+      <!--        <button (click)="patchValue()" style="background-color: transparent; border: none; color: white">-->
+      <!--          <mat-icon>done</mat-icon>-->
+      <!--        </button>-->
+      <!--      </div>-->
 
     </div>
   </div>
