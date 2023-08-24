@@ -20,9 +20,9 @@ Render, with a MongoDB Atlas cluster for the database.
 
 ### Routing
 
--The application employs Angular's routing mechanism to create different pages for various sections.
--A routing module defines the paths and corresponding components for each page.
--The routing structure includes pages for home, about, services, works, technologies, contact, FAQ, blog, user
+- The application employs Angular's routing mechanism to create different pages for various sections.
+- A routing module defines the paths and corresponding components for each page.
+- The routing structure includes pages for home, about, services, works, technologies, contact, FAQ, blog, user
 dashboard, login, administration, chatbot, and more.
 
 ### User Interaction
