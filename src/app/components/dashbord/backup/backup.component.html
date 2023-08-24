@@ -7,8 +7,8 @@
     <button (click)="downloadBackup()" style="background-color: #e74c3c">Download Backup</button>
   </div>
   <div class="col-12 col-md-4">
-    <button (click)="restoreDatabase()" style="background-color: #40407a">Re-Store Backup</button>
-    <input type="file" (change)="onFileChange($event)" accept=".tar.gz" />
+    <button (click)="restoreDatabase()" style="background-color: #40407a" disabled>Re-Store Backup</button>
+    <input type="file" (change)="onFileChange($event)" accept=".tar" disabled/>
   </div>
 </div>
 
@@ -20,4 +20,22 @@
       <div class="loading-count">Backing up...</div>
     </div>
   </div>
+</div>
+
+<div>
+  <p><span style="color: red">Note:-</span>
+  Backup restore process disabled because backend function is in development mode. follow these step to backup restore:
+  </p>
+  <ul>
+    <li>install mongo command tools for device</li>
+    <li>set environmental variables</li>
+    <li>set environmental variables</li>
+    <li>backup database</li>
+    <li>download database</li>
+    <li>extract download folder > Flexiart_DB > extract all .json and .bson files</li>
+    <li>open cmd in here</li>
+    <li>cd .. (navigate back)</li>
+    <li>mongorestore --uri mongodb+srv://db_backup:BackupAccount@flexiart.ti4faed.mongodb.net/Flexiart_DB --dir Flexiart_DB</li>
+    <li>enter</li>
+  </ul>
 </div>

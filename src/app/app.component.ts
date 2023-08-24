@@ -110,7 +110,8 @@ export class AppComponent implements OnInit {
         this.dDay = new Date(this.offerEndDay);
       }
       else{
-        console.log('error')
+        this.offerImage = './assets/img/modal-1.webp';
+        this.dDay = new Date('August 10, 2023');
       }
     }, error => {
       // console.log('server side error');
