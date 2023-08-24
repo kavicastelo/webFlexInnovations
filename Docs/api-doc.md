@@ -38,7 +38,7 @@ The application uses JSON Web Tokens (JWT) for user authentication. To access pr
 - **Response:** Returns a JWT token upon successful login.
 
 ### Contact Form Submission
-- **Endpoint:** /api/v1/flexiart/contact
+- **Endpoint:** `/api/v1/flexiart/contact`
 - **Method:** POST
 - **Description:** Handles user contact form submissions.
 - **Request Body:**
@@ -52,7 +52,7 @@ The application uses JSON Web Tokens (JWT) for user authentication. To access pr
 - **Response:** Returns a success message if the message is sent successfully.
 
 ### Dialog Flow Interaction
-- **Endpoint:** /api/v1/dialogFlow
+- **Endpoint:** `/api/v1/dialogFlow`
 - **Method:** POST
 - **Description:** Sends user messages to a Dialog Flow bot for processing.
 - **Request Body:**
